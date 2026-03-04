@@ -3,7 +3,7 @@ Projeto AlugaTabuleiro
 
 
 
-Referências 
+Referencias 
 https://www.arcaludis.com.br/
 https://www.placegames.com.br/ 
 https://allugator.com/ 
@@ -17,4 +17,5 @@ https://www.figma.com/make/FbzwERg4iBnFAJuBLXNQK9/Tabuleiro-Rental-Website?t=qwd
 
 GitHub
 https://github.com/mendes456/Aluga-Tabuleiro
+
 
