@@ -14,11 +14,13 @@ https://docs.google.com/document/d/1CrvaNHTAbjfzul0yc_FONekuDbc4BHcvhU4A_oQAV3w/
 
 Figma
 https://www.figma.com/make/FbzwERg4iBnFAJuBLXNQK9/Tabuleiro-Rental-Website?t=qwd5c8fZRcvArGrL-1
-https://www.figma.com/make/juthEl8P5pJE2zC2K0MxwC/Site-Aluga-Tabuleiro?p=f&t=NqkerypsbaaMa4yJ-0
+https://www.figma.com/make/juthEl8P5pJE2zC2K0MxwC/Site-Aluga-Tabuleiro?p=f&t=NqkerypsbaaMa4yJ-0 
+https://www.figma.com/make/SkeFBKZoUCzv9KEOuKs1Sm/Apply-Color-Palette?p=f&t=cmOiNzcAcOMAC6VU-0     brenda
 
 
 GitHub
 https://github.com/mendes456/Aluga-Tabuleiro
+
 
 
 
