@@ -1,0 +1,94 @@
+   :root {
+       --amarelo: #f7d12a;
+       --amarelo-claro: #E1C78C;
+       --laranja: #d86d26;
+       --laranja-hover: #ff8a3d;
+       --marrom-claro: #947f58;
+       --marrom: #494130;
+   }
+
+   * {
+       margin: 0;
+       padding: 0;
+       border: 0;
+       box-sizing: border-box;
+   }
+
+   /* HEADER */
+
+   .navbar {
+       background: #fffff3;
+       padding: 15px 30px;
+       
+   }
+
+   /* Logo */
+   .logo {
+       height: 130px;
+       width: 300px;
+       margin-right: 20px;
+   }
+
+   /* Menu  */
+   .navbar-nav {
+       margin: 0;
+       gap: 30px;
+   }
+
+   /* Nav links */
+   .nav-link {
+       font-size: 18px;
+       font-weight: 600;
+       color: var(--marrom);
+
+   }
+
+   .nav-link:hover {
+       color: var(--laranja);
+   }
+
+   /* Botões à direita */
+   .acoes-header {
+       display: flex;
+       gap: 20px;
+       align-items: center;
+   }
+
+   /* Botão carrinho */
+   .btn-carrinho {
+       color: #7A6949;
+       padding: 8px 14px;
+       border-radius: 6px;
+       text-decoration: none;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+
+   .btn-carrinho i {
+       font-size: 20px;
+   }
+
+   /* Botão login */
+   .btn-login {
+       background-color: var(--laranja);
+       color: white;
+       padding: 8px 18px;
+       border-radius: 6px;
+       font-weight: 600;
+       font-size: 18px;
+       text-decoration: none;
+   }
+
+   /* Hover carrinho */
+   .btn-carrinho:hover {
+       background-color: var(--laranja);
+       color: white;
+   }
+
+   /* Hover  login*/
+
+   .btn-login:hover {
+       background-color: var(--laranja-hover);
+       color: white;
+   }
