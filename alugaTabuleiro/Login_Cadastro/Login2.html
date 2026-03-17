@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Aluga Tabuleiro</title>
+    <link rel="stylesheet" href="Login2.css">
+</head>
+<body>
+    <div class="modal-overlay">
+        <div class="modal-card">
+            <button class="btn-close">&times;</button>
+            <h1>Aluga Tabuleiro</h1>
+            <p>Faça seu login para continuar:</p>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <div class="field-wrapper">
+                        <input type="email" id="email" placeholder="seu@email.com" required>
+                    </div>
+                    <span id="emailError" class="error-msg"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <div class="field-wrapper">
+                        <input type="password" id="password" placeholder="••••••" maxlength="6" required>
+                        <button type="button" id="toggleLoginPassword" class="toggle-btn">👁️</button>
+                    </div>
+                    <span id="passwordError" class="error-msg"></span>
+                </div>
+
+                <a href="#" class="forgot">Esqueci a senha</a>
+                <button type="submit" class="btn-submit">Entrar</button>
+            </form>
+
+            <p class="signup">Não tem conta? <a href="Cadastro.html">Criar conta grátis</a></p>
+        </div>
+    </div>
+    <script src="Login2.js"></script>
+</body>
+</html>

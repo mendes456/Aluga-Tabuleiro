@@ -1,0 +1,167 @@
+* /*Definindo as margens da página para o Grid Funcionar*/
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* ESSA LINHA É OBRIGATÓRIA */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Formação do Header*/
+header {
+    margin-bottom: 30px;    /* Cria o espaço entre o cabeçalho e o formulário */
+    text-align: center;     /* Centraliza o título e o texto de apoio */
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #7A6949;         
+    margin-bottom: 8px;     /* Espaço entre o h1 e o p */
+}
+
+header p {
+    font-size: 16px;
+    color: #7A6949;
+    
+}
+
+/* Aumentamos um pouco a largura máxima para caber os campos duplos */
+.modal-card {
+    max-width: 500px; 
+    padding: 30px;
+}
+
+/* A mágica para colocar itens lado a lado */
+.address-grid {
+    display: grid;
+    /* 2fr para o CEP (espaço maior) e 1fr para o Número (espaço menor) */
+    grid-template-columns: 2fr 1fr; 
+    gap: 10px; /* Espaço entre o CEP e o Número */
+    align-items: end; /* Alinha os campos por baixo, caso um label seja maior que o outro */
+    margin-bottom: 15px;
+}
+/* Garante que o grupo de input não tente fugir da coluna do grid */
+.address-grid .input-group {
+    margin-bottom: 0; /* Removemos a margem de baixo aqui porque o gap do grid já resolve */
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column; /* Label em cima, Input embaixo */
+    align-items: flex-start; /* Alinha o texto do label à esquerda */
+    margin-bottom: 15px;    /* Espaço entre as linhas do formulário */
+    width: 100%;
+}
+
+/* Ajuste nos labels para ficarem com a cor do nosso tema */
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #7A6949;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2d9c5;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #f56a07;
+}
+/* Estilo para campos que a API vai preencher sozinha */
+input[readonly] {
+    background-color: #f0f0f0; /* Fundo cinza para parecer "travado" */
+    cursor: not-allowed;       /* Muda o ícone do mouse */
+    border-color: #ddd;
+}
+
+.password-hint {
+    display: block;       /* Garante que o texto fique na linha abaixo do input */
+    font-size: 12px;      /* Tamanho menor (o padrão geralmente é 16px) */
+    color: #888888;      /* Um cinza médio/claro */
+    margin-top: 5px;     /* Pequeno espaço entre o campo e o texto de orientação */
+    font-weight: 400;    /* Garante que a fonte não esteja em negrito */
+    font-style: italic;  /* Opcional: deixa em itálico para diferenciar de labels */
+}
+
+.password-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #e2d9c5;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.password-wrapper input {
+    flex: 1; /* Ocupa todo o espaço, empurrando o olho para o canto */
+    border: none; /* Removemos a borda interna para não ficar duplo */
+    padding: 12px;
+    outline: none;
+    border-radius: 10px 0 0 10px;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #7A6949;
+}
+    
+
+.btn-register {
+    width: 100%;             /* Ocupa toda a largura do modal */
+    padding: 15px;           /* Altura confortável para o clique */
+    background-color: #f56a07; /* O laranja da sua marca */
+    color: #ffffff;          /* Texto branco */
+    border: none;            /* Remove a borda padrão do navegador */
+    border-radius: 12px;     /* Bordas arredondadas iguais aos inputs */
+    font-size: 16px;
+    font-weight: bold;       /* Destaque no texto */
+    cursor: pointer;         /* Cursor de "mãozinha" */
+    margin-top: 30px;        /* Espaço generoso após os campos de senha */
+    transition: all 0.3s ease; /* Suaviza as mudanças de cor e tamanho */
+    box-shadow: 0 4px 15px rgba(245, 106, 7, 0.2); /* Sombra laranja suave */
+}
+
+/* Efeito ao passar o mouse */
+.btn-register:hover {
+    background-color: #d45b05; /* Escurece um pouco */
+    box-shadow: 0 6px 20px rgba(245, 106, 7, 0.3); /* Aumenta a sombra */
+    transform: translateY(-2px); /* O botão "sobe" levemente */
+}
+
+/* Efeito ao clicar */
+.btn-register:active {
+    transform: translateY(0);   /* O botão volta para a posição original */
+    transform: scale(0.98);      /* Efeito de "afundar" levemente */
+}
+
+/* Container do texto "Já tem conta?" */
+.signup {
+    margin-top: 25px;         /* Espaço abaixo do botão 'Entrar' */
+    font-size: 14px;          /* Texto um pouco menor para não competir com o formulário */
+    color: #7A6949;         
+    text-align:center;       /* Centraliza o texto no meio do modal */
+}
+
+/* Estilo específico para o link dentro do parágrafo */
+.signup a {
+    color: #f56a07;          
+    text-decoration: none;    /* Remove o sublinhado azul padrão */
+    font-weight: bold;        
+   
+}
