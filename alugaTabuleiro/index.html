@@ -49,7 +49,7 @@
                     <!-- Passo 1 -->
                     <div class="col-md-3">
                         <div class="passo">
-                            <img src="img/dado.jpg" class="icone-passo" id="dado">
+                            <img src="img/dado.png" class="icone-passo" id="dado">
                             <h5>1. Escolha o jogo</h5>
                             <p>Navegue pelo catálogo e encontre o jogo perfeito</p>
                         </div>
@@ -108,7 +108,7 @@
 
                 <!-- CARROSSEL DE JOGOS -->
                 <div class="carrossel-wrapper">
-                   
+
                     <div class="carrossel">
 
                         <!-- Exemplo de card -->
@@ -126,7 +126,7 @@
                                     Período: 3 dias<br>
                                     R$ 25,00
                                 </p>
-                                <button class="btn-comprar">🛒 Comprar</button>
+                                <button class="btn-comprar">🛒 Alugar</button>
                             </div>
                         </div>
 
@@ -145,7 +145,7 @@
                                     R$ 25,00
                                 </p>
                                 <button class="btn-comprar">
-                                    🛒 Comprar
+                                    🛒 Alugar
                                 </button>
                             </div>
                         </div>
@@ -164,7 +164,7 @@
                                     R$ 25,00
                                 </p>
                                 <button class="btn-comprar">
-                                    🛒 Comprar
+                                    🛒 Alugar
                                 </button>
                             </div>
                         </div>
@@ -184,7 +184,7 @@
                                     R$ 30,00
                                 </p>
                                 <button class="btn-comprar">
-                                    🛒 Comprar
+                                    🛒 Alugar
                                 </button>
                             </div>
                         </div>
@@ -194,8 +194,8 @@
                                 <img src="img/war.jpg" alt="War">
                             </a>
                             <div class="card-info">
-                                 <br> <br>
-                                 
+                                <br> <br>
+
                                 <h5 class="nome-jogo" id="war">War</h5>
                                 <span class="status disponivel">🟢 Disponível</span>
                                 <p class="detalhes-jogo">
@@ -206,7 +206,7 @@
                                     R$ 25,00
                                 </p>
                                 <button class="btn-comprar">
-                                    🛒 Comprar
+                                    🛒 Alugar
                                 </button>
                             </div>
                         </div>
@@ -226,12 +226,12 @@
                                     R$ 20,00
                                 </p>
                                 <button class="btn-comprar">
-                                    🛒 Comprar
+                                    🛒 Alugar
                                 </button>
                             </div>
                         </div>
 
-                       
+
 
 
                     </div>
@@ -250,7 +250,24 @@
     <div id="footer"></div>
 
 
+    <!-- VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget();
+    </script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="js/acessibilidade.js"></script>
     <script src="js/loadComponents.js"></script>
     <script src="js/index.js"></script>
 

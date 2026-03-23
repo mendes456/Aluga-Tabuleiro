@@ -1,34 +1,52 @@
-<header>
+<header class="fixed-top">
 
-   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-    <div class="container-fluid"> 
+    <!-- 🔵 BARRA DE ACESSIBILIDADE -->
+    <div class="barra-acessibilidade">
+        <div class="container d-flex justify-content-end align-items-center gap-3">
 
-        <a class="navbar-brand ms-0" href="index.html">
-            <img src="img/logo.jpg" class="logo">
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="menu">
-
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre a empresa</a></li>
-                <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
-                <li class="nav-item"><a class="nav-link" href="atendimento.html">Atendimento</a></li>
-            </ul>
-
-            <div class="acoes-header">
-                <a href="carrinho.html" class="btn-carrinho">
-                    <i class="bi bi-cart3"></i>
-                </a>
-                <a href="login.html" class="btn-login">Login</a>
+            <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-universal-access"></i>
+                <span>Acessibilidade |</span>
             </div>
+
+
+            <button class="btn-dark">🌙</button>
+            <button class="btn-diminuir">A-</button>
+            <button class="btn-normal">A</button>
+            <button class="btn-aumentar">A+</button>
 
         </div>
     </div>
-</nav>
+
+    <!-- 🟡 NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-fluid">
+
+            <a class="navbar-brand ms-0" href="index.html">
+                <img src="img/logo.png" class="logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse menu-expandido" id="menu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre a empresa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="atendimento.html">Atendimento</a></li>
+                </ul>
+
+                <div class="acoes-header">
+                    <a href="carrinho.html" class="btn-carrinho">
+                        <i class="bi bi-cart3"></i>
+                    </a>
+                    <a href="login.html" class="btn-login">Login</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
 
 </header>
