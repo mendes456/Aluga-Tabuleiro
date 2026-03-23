@@ -88,3 +88,59 @@
             padding-top: 15px;
             font-size: 14px;
         }
+
+
+/*  modo escuro */
+
+/* 🔥 FORÇA TUDO BRANCO NO FOOTER */
+.dark-mode .footer,
+.dark-mode .footer * {
+    color: #ffffff !important;
+}
+
+/* FUNDO PRINCIPAL */
+.dark-mode .footer {
+    background-color: #1e1e1e !important;
+}
+
+/* TÍTULOS */
+.dark-mode .footer h5 {
+    color: #f7d12a !important; /* amarelo do seu tema */
+}
+
+/* LINKS */
+.dark-mode .footer a {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.dark-mode .footer a:hover {
+    color: #ff8a3d !important; /* laranja hover */
+}
+
+/* ÍCONES */
+.dark-mode .footer i {
+    color: #ffffff !important;
+}
+
+/* REDES SOCIAIS */
+.dark-mode .footer .social a {
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.dark-mode .footer .social a:hover {
+    color: #ff8a3d !important;
+}
+
+/* PARTE DE BAIXO */
+.dark-mode .footer-bottom {
+    background-color: #121212 !important;
+    border-top: 1px solid #333;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dark-mode .footer-bottom p {
+    color: #aaaaaa !important;
+}

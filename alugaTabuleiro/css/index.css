@@ -235,7 +235,7 @@ box-shadow:0 10px 20px rgba(0,0,0,0.2); /* sombra maior */
 
 
 .detalhes-jogo {
-    font-size: 14px;
+   
     line-height: 1.5;
     text-align: left;
 
@@ -298,6 +298,115 @@ box-shadow:0 10px 20px rgba(0,0,0,0.2); /* sombra maior */
 
 
 
+
+
+
+/*                         modo escuro                  */
+
+
+.dark-mode body,
+.dark-mode main {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+
+.dark-mode main * {
+    color: #ffffff !important;
+}
+
+/* 🎯 BANNER */
+.dark-mode .banner {
+    background: #1a1a1a !important; /* 🔥 substitui o gradient */
+}
+
+/* BOTÕES DO BANNER */
+.dark-mode .btn-banner {
+    background-color: #d86d26 !important;
+    color: white !important;
+    border: none;
+}
+
+.dark-mode .btn-banner:hover {
+    background-color: #ff8a3d !important;
+}
+
+/* 📦 COMO FUNCIONA */
+.dark-mode .como-funciona {
+    background: #000000 !important;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* caixas */
+.dark-mode .passo {
+    background-color: #111111 !important;
+    border: 1px solid #ffffff !important;
+}
+
+/* texto interno */
+.dark-mode .como-funciona h5,
+.dark-mode .como-funciona p {
+    color: #ffffff !important;
+}
+
+
+
+/* ⭐ CATÁLOGO */
+.dark-mode .catalogo-section {
+    background-color: #181818 !important;
+}
+
+/* LINK "VER CATÁLOGO" */
+.dark-mode .ver-catalogo a {
+    color: #f7d12a !important;
+}
+
+.dark-mode .ver-catalogo a:hover {
+    color: #ff8a3d !important;
+}
+
+/* 🃏 CARDS */
+.dark-mode .card-jogo {
+    background-color: #1e1e1e !important;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* PARTE DE BAIXO DO CARD */
+.dark-mode .card-info {
+    background-color: #1e1e1e !important;
+}
+
+/* STATUS DISPONÍVEL */
+.dark-mode .status.disponivel {
+    color: #4CAF50 !important;
+}
+
+/* BOTÃO ALUGAR */
+.dark-mode .btn-comprar {
+    background-color: #d86d26 !important;
+    color: white !important;
+    border: none;
+}
+
+.dark-mode .btn-comprar:hover {
+    background-color: #ff8a3d !important;
+}
+
+/* LINKS DOS CARDS */
+.dark-mode .card-link {
+    color: white !important;
+}
+
+/* 🎯 TÍTULOS */
+.dark-mode .titulo-secao {
+    color: #f7d12a !important;
+}
+
+
+
 /* responsivo*/
 
 
@@ -340,6 +449,40 @@ padding:40px 20px;
 }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* TELAS ATÉ 768px (TABLET PEQUENO) */
 
