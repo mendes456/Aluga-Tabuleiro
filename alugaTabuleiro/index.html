@@ -124,9 +124,11 @@
                                     Duração: 60-120 min<br>
                                     Categoria: Estratégia<br>
                                     Período: 3 dias<br>
-                                    R$ 25,00
+                                    R$ 20,00
                                 </p>
-                                <button class="btn-comprar">🛒 Alugar</button>
+                                <button class="btn-comprar" onclick="adicionarCarrinho('Catan', 20)">
+                                    🛒 Alugar
+                                </button>
                             </div>
                         </div>
 
@@ -142,9 +144,9 @@
                                     Duração: 30-60 min<br>
                                     Categoria: Família<br>
                                     Período: 3 dias<br>
-                                    R$ 25,00
+                                    R$ 15,00
                                 </p>
-                                <button class="btn-comprar">
+                                <button class="btn-comprar" onclick="adicionarCarrinho('Ticket to Ride', 15)">
                                     🛒 Alugar
                                 </button>
                             </div>
@@ -161,9 +163,9 @@
                                     Duração: 30-45 min<br>
                                     Categoria: Estratégia<br>
                                     Período: 3 dias<br>
-                                    R$ 25,00
+                                    R$ 28,00
                                 </p>
-                                <button class="btn-comprar">
+                                <button class="btn-comprar" onclick="adicionarCarrinho('Azul', 28)">
                                     🛒 Alugar
                                 </button>
                             </div>
@@ -183,7 +185,7 @@
                                     Período: 3 dias<br>
                                     R$ 30,00
                                 </p>
-                                <button class="btn-comprar">
+                                <button class="btn-comprar" onclick="adicionarCarrinho('Pandemic', 30)">
                                     🛒 Alugar
                                 </button>
                             </div>
@@ -205,7 +207,7 @@
                                     Período: 3 dias<br>
                                     R$ 25,00
                                 </p>
-                                <button class="btn-comprar">
+                                <button class="btn-comprar" onclick="adicionarCarrinho('War', 25)">
                                     🛒 Alugar
                                 </button>
                             </div>
@@ -223,9 +225,9 @@
                                     Duração: 90 min<br>
                                     Categoria: Família<br>
                                     Período: 3 dias<br>
-                                    R$ 20,00
+                                    R$ 40,00
                                 </p>
-                                <button class="btn-comprar">
+                                <button class="btn-comprar" onclick="adicionarCarrinho('banco-imobiliario', 40)">
                                     🛒 Alugar
                                 </button>
                             </div>
@@ -249,6 +251,30 @@
     <!-- rodapé -->
     <div id="footer"></div>
 
+    <!--Modal-->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="carrinhoLateral">
+
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Seu Carrinho</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body d-flex flex-column">
+
+            <ul id="lista-carrinho" class="list-group mb-3"></ul>
+
+            <p id="carrinho-vazio" class="text-center mt-3">
+                Seu carrinho está vazio 🛒
+            </p>
+
+            <h5 class="mt-auto">Total: R$ <span id="total">0.00</span></h5>
+
+            <button class="btn-finalizar w-100 mt-2" onclick="irParaFinalizarCompra() ">
+                Finalizar Compra
+            </button>
+        </div>
+    </div>
+
 
     <!-- VLibras -->
     <div vw class="enabled">
@@ -262,6 +288,7 @@
     <script>
         new window.VLibras.Widget();
     </script>
+    
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

@@ -16,17 +16,18 @@
 
    /* HEADER */
 
+
    .navbar {
        background: #fffff3;
-       padding: 15px 30px;
-
+       padding-top: 5px !important;
+       padding-bottom: 5px !important;
    }
 
    /* Logo */
    .logo {
-       height: 130px;
-       width: 300px;
-       margin-right: 20px;
+       height: 170px;
+       width: auto;
+
    }
 
    /* Menu  */
@@ -181,18 +182,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-   
 
 
 

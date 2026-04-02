@@ -31,3 +31,4 @@ function ativarAcessibilidade() {
     document.querySelector(".btn-normal")?.addEventListener("click", fonteNormal);
 
 }
+document.addEventListener("DOMContentLoaded", ativarAcessibilidade);

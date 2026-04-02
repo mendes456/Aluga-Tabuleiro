@@ -1,0 +1,288 @@
+:root {
+    --amarelo: #f7d12a;
+    --amarelo-claro: #E1C78C;
+    --laranja: #d86d26;
+    --laranja-hover: #ff8a3d;
+    --marrom-claro: #947f58;
+    --marrom: #494130;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+
+
+
+/* HEADER */
+.navbar {
+    background-color: #f2f3ec !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    border-bottom: 1px solid #ddd;
+}
+
+/* LOGO */
+.logo {
+    padding-left: 20px;
+    height: 160px;
+    width: auto;
+
+}
+
+/* BARRA DE ACESSIBILIDADE */
+.barra-acessibilidade {
+    background-color: transparent;
+    color: var(--marrom);
+
+}
+
+/* REMOVE ESPAÇO EXTRA DO CONTAINER */
+.navbar .container-fluid {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+
+/* TEXTO E ÍCONE */
+.barra-acessibilidade span,
+.barra-acessibilidade i {
+    color: var(--marrom);
+    font-weight: 600;
+}
+
+/* BOTÕES GERAIS */
+.barra-acessibilidade button {
+    border: none;
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+
+/* MAIN  */
+
+/* fundo geral */
+
+main {
+    background-color: #ffffff;
+    padding: 40px 20px;
+}
+
+/* GRID */
+main .row {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* TÍTULOS */
+main h3,
+main h4 {
+    color: var(--marrom);
+    font-weight: 700;
+}
+
+/* LISTA DE PEDIDOS */
+#lista-pedidos .list-group-item {
+    border-radius: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+/* HOVER NOS ITENS */
+#lista-pedidos .list-group-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+}
+
+/* BOTÃO REMOVER */
+#lista-pedidos button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: red;
+    transition: 0.3s;
+}
+
+#lista-pedidos button:hover {
+    transform: scale(1.2);
+}
+
+/* RESUMO */
+.resumo-box {
+    background: #f2f3ec;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+/* SELECT */
+#periodo,
+#metodoPagamento {
+    border-radius: 8px;
+}
+
+/* PIX */
+#pagamento-pix img {
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* CARTÃO */
+#pagamento-cartao input {
+    border-radius: 6px;
+}
+
+/* TOTAL */
+#total {
+    color: var(--laranja);
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* BOTÃO FINALIZAR */
+.btn-finalizar {
+    background-color: var(--laranja);
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-finalizar:hover {
+    background-color: var(--laranja-hover);
+    transform: scale(1.03);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* modo escuro  */
+
+/* header */
+
+/* 🌙 HEADER MODO ESCURO */
+.dark-mode .navbar {
+    background-color: #121212 !important;
+    border-bottom: 1px solid #333;
+}
+
+/* LOGO (opcional - se quiser clarear) */
+.dark-mode .logo {
+    filter: brightness(1.2);
+}
+
+/* TEXTO */
+.dark-mode .barra-acessibilidade,
+.dark-mode .barra-acessibilidade span,
+.dark-mode .barra-acessibilidade i {
+    color: #ffffff !important;
+}
+
+/* BOTÃO DARK (ativo) */
+.dark-mode .btn-dark {
+    background-color: var(--amarelo);
+    color: var(--marrom);
+}
+
+/* BOTÕES DE FONTE */
+.dark-mode .btn-diminuir,
+.dark-mode .btn-normal,
+.dark-mode .btn-aumentar {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+/* HOVER */
+.dark-mode .btn-diminuir:hover,
+.dark-mode .btn-normal:hover,
+.dark-mode .btn-aumentar:hover {
+    background-color: var(--laranja);
+    color: white;
+}
+
+
+
+/* MAIN / ESCURO */
+
+
+.dark-mode main {
+    background-color: #121212 !important;
+}
+
+/* TÍTULOS */
+.dark-mode main h3,
+.dark-mode main h4 {
+    color: var(--amarelo) !important;
+}
+
+/* LISTA */
+.dark-mode #lista-pedidos .list-group-item {
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid #333;
+}
+
+/* RESUMO */
+.dark-mode .resumo-box {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: white;
+}
+
+/* INPUTS */
+.dark-mode input,
+.dark-mode select {
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #444;
+}
+
+/* TOTAL */
+.dark-mode #total {
+    color: var(--amarelo);
+}
+
+/* BOTÃO */
+.dark-mode .btn-finalizar {
+    background-color: var(--laranja);
+}
+
+.dark-mode .btn-finalizar:hover {
+    background-color: var(--laranja-hover);
+}
+
