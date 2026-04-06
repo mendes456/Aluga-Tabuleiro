@@ -11,7 +11,7 @@
 
 /* Fundo geral da página desta política */
 body {
-    background-color: #f9f3e5; /* tom bem claro, próximo ao amarelo/creme */
+    background-color: #f5f5f5; /* cinza claro */
 }
 
 /* Área principal da política */
@@ -87,6 +87,19 @@ footer.mt-5 {
     padding-top: 15px;
 }
 
+/* Footer geral da página */
+footer.footer {
+    background-color: #7A6949 !important;
+}
+
+footer.footer p {
+    color: white !important;
+}
+
+footer.footer h5 {
+    color: #E1C78C !important;
+}
+
 /* Links dentro da política (caso futuramente haja) */
 .politica-container a,
 .col-lg-10 a {
@@ -114,4 +127,63 @@ footer.mt-5 {
     h2 {
         font-size: 1.15rem;
     }
+}
+
+/* MODO ESCURO */
+.dark-mode {
+    background-color: #121212;
+}
+
+.dark-mode body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode main {
+    background-color: #121212;
+}
+
+.dark-mode .col-lg-10 {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode h1 {
+    color: #f7d12a;
+}
+
+.dark-mode h2 {
+    color: #ff8a3d;
+}
+
+.dark-mode p {
+    color: #e0e0e0;
+}
+
+.dark-mode article {
+    border-left-color: rgba(255, 138, 61, 0.3);
+}
+
+.dark-mode .text-muted {
+    color: #a0a0a0 !important;
+}
+
+.dark-mode article ul li {
+    color: #e0e0e0;
+}
+
+.dark-mode footer {
+    border-top-color: rgba(100, 100, 100, 0.3);
+}
+
+.dark-mode .politica-container a,
+.dark-mode .col-lg-10 a {
+    color: #ff8a3d;
+}
+
+.dark-mode .politica-container a:hover,
+.dark-mode .col-lg-10 a:hover {
+    color: #ffb366;
 }
