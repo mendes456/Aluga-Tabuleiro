@@ -128,10 +128,6 @@
 
 
 
-
-
-
-
    /* DARK MODE */
 
 
@@ -179,6 +175,117 @@
    .dark-mode .navbar-toggler {
        filter: invert(1);
    }
+
+
+
+   /*      modal  CARRINHO   */
+
+   /* CONTADOR */
+   #contador-carrinho {
+       background-color: var(--laranja);
+       color: white;
+       font-size: 12px;
+       padding: 2px 6px;
+       border-radius: 50%;
+       margin-left: 5px;
+   }
+
+   /* CARRINHO */
+   .offcanvas {
+       background-color: #fffff3;
+   }
+
+   .offcanvas-title {
+       color: var(--marrom);
+   }
+
+   /* BOTÃO FINALIZAR */
+   .btn-finalizar {
+       background-color: var(--laranja);
+       color: white;
+       font-weight: bold;
+       padding: 10px;
+       border-radius: 6px;
+   }
+
+   .btn-finalizar:hover {
+       background-color: var(--laranja-hover);
+   }
+
+   /* ITEM */
+   .item-carrinho {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+
+   .btn-remover {
+       background: none;
+       color: red;
+       font-size: 18px;
+   }
+
+   #carrinho-vazio {
+       color: var(--marrom-claro);
+       font-size: 16px;
+   }
+
+   /*  escuro carrinho */
+
+   /* Fundo do modal */
+   .dark-mode .offcanvas {
+       background-color: #1e1e1e !important;
+       color: white;
+   }
+
+   /* Header */
+   .dark-mode .offcanvas-header {
+       background-color: #2a2a2a;
+       border-bottom: 1px solid #444;
+   }
+
+   /* Título */
+   .dark-mode .offcanvas-title {
+       color: white;
+   }
+
+   /* Botão fechar */
+   .dark-mode .btn-close {
+       filter: invert(1);
+   }
+
+   /* Lista de itens */
+   .dark-mode .list-group-item {
+       background-color: #2a2a2a;
+       color: white;
+       border-color: #444;
+   }
+
+   /* Texto carrinho vazio */
+   .dark-mode #carrinho-vazio {
+       color: #ccc;
+   }
+
+   /* Total */
+   .dark-mode #total {
+       color: var(--amarelo);
+   }
+
+   /* Botão finalizar */
+   .dark-mode .btn-finalizar {
+       background-color: var(--laranja);
+       color: white;
+   }
+
+   .dark-mode .btn-finalizar:hover {
+       background-color: var(--laranja-hover);
+   }
+
+   /* Botão remover */
+   .dark-mode .btn-remover {
+       color: #ff6b6b;
+   }
+
 
 
 

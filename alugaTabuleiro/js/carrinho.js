@@ -1,4 +1,31 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 🛒 CARREGAR CARRINHO DO LOCALSTORAGE
 let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
@@ -9,13 +36,16 @@ function adicionarCarrinho(nome, preco) {
 
     localStorage.setItem("carrinho", JSON.stringify(carrinho));
 
-    atualizarCarrinho(); // 🔥 atualiza na hora
+    atualizarCarrinho(); 
+    atualizarContador();
 
    
 }
 
 // 🔄 ATUALIZAR CARRINHO
 function atualizarCarrinho() {
+
+    carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
     let lista = document.getElementById("lista-carrinho");
     let total = 0;
     let vazio = document.getElementById("carrinho-vazio");
@@ -49,6 +79,16 @@ function atualizarCarrinho() {
     }
 }
 
+// ATUALIZAR CONTADOR
+function atualizarContador() {
+    let carrinhoStorage = JSON.parse(localStorage.getItem("carrinho")) || [];
+    let contador = document.getElementById("contador-carrinho");
+
+    if (contador) {
+        contador.textContent = carrinhoStorage.length;
+    }
+}
+
 // ❌ REMOVER ITEM
 function removerItem(index) {
     carrinho.splice(index, 1);
@@ -56,6 +96,7 @@ function removerItem(index) {
     localStorage.setItem("carrinho", JSON.stringify(carrinho));
 
     atualizarCarrinho();
+    atualizarContador();
 }
 
 // 🚀 IR PARA FINALIZAR COMPRA
@@ -70,6 +111,23 @@ function irParaFinalizarCompra() {
 }
 
 // 🚀 INICIALIZAÇÃO
+
 document.addEventListener("DOMContentLoaded", function () {
-    atualizarCarrinho();
+
+    let tentativas = 0;
+
+    let intervalo = setInterval(() => {
+
+        let lista = document.getElementById("lista-carrinho");
+
+        if (lista || tentativas > 10) {
+            atualizarCarrinho();
+            atualizarContador();
+            clearInterval(intervalo);
+        }
+
+        tentativas++;
+
+    }, 100);
+
 });

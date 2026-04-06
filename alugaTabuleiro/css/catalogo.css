@@ -32,7 +32,7 @@
     flex-direction: column;
 }
 
-.btn-alugar{
+.btn-comprar{
     margin-top: auto;
 }
 
@@ -50,7 +50,7 @@ body{
 }
 
 /* BOTÃO COMPRAR */
-.btn-alugar {
+.btn-comprar {
     background-color: var(--verde);
     color: white;
     border: none;
@@ -61,7 +61,7 @@ body{
     transition: background 0.3s;
 }
 
-.btn-alugar:hover {
+.btn-comprar:hover {
     background-color: var(--verde-hover);
 }
 
@@ -195,3 +195,6 @@ body{
 .dark-mode .btn-close {
     filter: invert(1);
 }
+
+
+

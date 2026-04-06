@@ -39,17 +39,46 @@
                 </ul>
 
                 <div class="acoes-header">
-                    
+
                     <a href="#" class="btn-carrinho" data-bs-toggle="offcanvas" data-bs-target="#carrinhoLateral">
                         <i class="bi bi-cart3"></i>
                         <span id="contador-carrinho">0</span>
                     </a>
 
                     <a href="login.html" class="btn-login">Login</a>
+
+                   
+
+
+
                 </div>
             </div>
 
         </div>
     </nav>
+
+     <!--Modal  CARRINHO -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="carrinhoLateral">
+
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title">Seu Carrinho</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                        </div>
+
+                        <div class="offcanvas-body d-flex flex-column">
+
+                            <ul id="lista-carrinho" class="list-group mb-3"></ul>
+
+                            <p id="carrinho-vazio" class="text-center mt-3">
+                                Seu carrinho está vazio 🛒
+                            </p>
+
+                            <h5 class="mt-auto">Total: R$ <span id="total">0.00</span></h5>
+
+                            <button class="btn-finalizar w-100 mt-2" onclick="irParaFinalizarCompra() ">
+                                Finalizar Compra
+                            </button>
+                        </div>
+                    </div>
 
 </header>
