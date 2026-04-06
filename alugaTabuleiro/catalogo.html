@@ -1,552 +1,581 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/catalogo.css">
-    <script src="js/catalogo.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - Aluga Tabuleiro</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/catalogo.css">
+
 </head>
+
 <body>
-    <div id="header"></div>
-    <div class="container mt-4">
-        <div class="row mb-4">
-    <div class="col-md-6">
+
+  <!-- cabeçalho-->
+  <div id="header"></div>
+
+
+  <div class="container mt-4">
+    <div class="row mb-4">
+      <div class="col-md-6">
         <br>
-        <input 
-            type="text" 
-            id="busca" 
-            class="form-control" 
-            placeholder="🔎 Buscar jogo ou categoria..."
-            onkeyup="buscarJogos()">
+        <input type="text" id="busca" class="form-control" placeholder="🔎 Buscar jogo ou categoria..."
+          onkeyup="buscarJogos()">
+      </div>
     </div>
-</div>
     <div class="row catalogo-jogos">
 
-        <div class="col-md-3"  data-categoria="familia">
-            <div class="card jogo">
-                <img src="img/bancoImobiliario2.webp" id="banco" class="card-img-top" alt="banco"
-                data-bs-toggle="modal" data-bs-target="#modalBanco">
-                <div class="card-body">
-                    <h5 class="card-title">Banco Imobiliário</h5>
-                    <p class="card-text">Jogo de estratégia clássico.</p>
-                    <p class="card-text">Jogadores: 2-6<br>
-                        Duração:90 min<br>
-                        Categoria:Família<br>
-                        Período:3 dias<br>
-                        R$ 20,00</p>
-                    <button class="btn-alugar">🛒 Alugar</button>    
-                </div>
-            </div>
+      <div class="col-md-3" data-categoria="familia">
+        <div class="card jogo">
+          <img src="img/bancoImobiliario2.webp" id="banco" class="card-img-top" alt="banco" data-bs-toggle="modal"
+            data-bs-target="#modalBanco">
+          <div class="card-body">
+            <h5 class="card-title">Banco Imobiliário</h5>
+            <p class="card-text">Jogo de estratégia clássico.</p>
+            <p class="card-text">Jogadores: 2-6<br>
+              Duração:90 min<br>
+              Categoria:Família<br>
+              Período:3 dias<br>
+              R$ 20,00</p>
+            <button class="btn-comprar" onclick="adicionarCarrinho('Banco Imobiliário', 20)">🛒 Alugar</button>
+          </div>
         </div>
+      </div>
 
-        <div class="col-md-3"  data-categoria="estategia">
-            <div class="card jogo">
-                <img src="img/catan.jpg" class="card-img-top" alt="Damas" height="100px" width="100px"
-                data-bs-toggle="modal" data-bs-target="#modalCatan">
-                <div class="card-body">
-                    <h5 class="card-title">Catan</h5>
-                    <p class="card-text">Capture as peças do adversário.</p>
-                    <p class="card-text">Jogadores: 3-4<br>
-                        Duração: 60-120 min<br>
-                        Categoria: Estratégia<br>
-                        Período: 3 dias<br>
-                        R$ 25,00</p>
-                    <button class="btn-alugar">🛒 Alugar</button>
-                </div>
-            </div>
+      <div class="col-md-3" data-categoria="estategia">
+        <div class="card jogo">
+          <img src="img/catan.jpg" class="card-img-top" alt="Damas" height="100px" width="100px" data-bs-toggle="modal"
+            data-bs-target="#modalCatan">
+          <div class="card-body">
+            <h5 class="card-title">Catan</h5>
+            <p class="card-text">Capture as peças do adversário.</p>
+            <p class="card-text">Jogadores: 3-4<br>
+              Duração: 60-120 min<br>
+              Categoria: Estratégia<br>
+              Período: 3 dias<br>
+              R$ 20,00</p>
+            <button class="btn-comprar" onclick="adicionarCarrinho('Catan', 20)">🛒 Alugar</button>
+          </div>
         </div>
+      </div>
 
-        <div class="col-md-3"  data-categoria="familia">
-            <div class="card jogo">
-                <img src="img/ticket.jpg" class="card-img-top" alt="Banco Imobiliário" data-bs-toggle="modal" data-bs-target="#modalTicket">
-                <div class="card-body">
-                    <h5 class="card-title">Ticket to Ride</h5>
-                    <p class="card-text">Compre propriedades e fique rico.</p>
-                    <p class="card-text">Jogadores: 2-5<br>
-                        Duração: 30-60 min<br>
-                        Categoria: Família<br>
-                        Período: 3 dias<br>
-                        R$ 25,00</p>
-                    <button class="btn-alugar">🛒 Alugar</button>
-                </div>
-            </div>
+      <div class="col-md-3" data-categoria="familia">
+        <div class="card jogo">
+          <img src="img/ticket.jpg" class="card-img-top" alt="Banco Imobiliário" data-bs-toggle="modal"
+            data-bs-target="#modalTicket">
+          <div class="card-body">
+            <h5 class="card-title">Ticket to Ride</h5>
+            <p class="card-text">Compre propriedades e fique rico.</p>
+            <p class="card-text">Jogadores: 2-5<br>
+              Duração: 30-60 min<br>
+              Categoria: Família<br>
+              Período: 3 dias<br>
+              R$ 15,00</p>
+            <button class="btn-comprar" onclick="adicionarCarrinho('Ticket to Ride', 15)">🛒 Alugar</button>
+          </div>
         </div>
+      </div>
 
-        <div class="col-md-3"  data-categoria="estrategia">
-            <div class="card jogo">
-                <img src="img/war2.webp" id="war" class="card-img-top" alt="Ludo" data-bs-toggle="modal" data-bs-target="#modalWar">
-                <div class="card-body">
-                    <h5 class="card-title">War</h5>
-                    <p class="card-text">Leve suas peças até o final.</p>
-                    <p class="card-text">Jogadores: 2-6<br>
-                        Duração: 60-120 min<br>
-                        Categoria: Estratégia<br>
-                        Período: 3 dias<br>
-                        R$ 25,00</p>
-                    <button class="btn-alugar">🛒 Alugar</button>
-                </div>
-            </div>
+      <div class="col-md-3" data-categoria="estrategia">
+        <div class="card jogo">
+          <img src="img/war2.webp" id="war" class="card-img-top" alt="Ludo" data-bs-toggle="modal"
+            data-bs-target="#modalWar">
+          <div class="card-body">
+            <h5 class="card-title">War</h5>
+            <p class="card-text">Leve suas peças até o final.</p>
+            <p class="card-text">Jogadores: 2-6<br>
+              Duração: 60-120 min<br>
+              Categoria: Estratégia<br>
+              Período: 3 dias<br>
+              R$ 25,00</p>
+            <button class="btn-comprar" onclick="adicionarCarrinho('War', 25)">🛒 Alugar</button>
+          </div>
         </div>
-        <div class="col-md-3"  data-categoria="estrategia">
-            <div class="card jogo">
-                <img src="img/azul.jpg" class="card-img-top" alt="Azul" data-bs-toggle="modal" data-bs-target="#modalAzul">
-                <div class="card-body">
-                    <h5 class="card-title">Azul</h5>
-                    <p class="card-text">Jogo de estratégia clássico.</p>
-                    <p class="card-text">Jogadores: 2-4<br>
-                        Duração: 30-45 min<br>
-                        Categoria: Estratégia<br>
-                        Período: 3 dias<br>
-                        R$ 25,00</p>
-                    <button class="btn-alugar">🛒 Alugar</button>
-                </div>
-            </div>
-        </div>
+      </div>
 
-        <div class="col-md-3"  data-categoria="cooperativo">
-            <div class="card jogo">
-                <img src="img/pandemic.jpg" class="card-img-top" alt="Damas" data-bs-toggle="modal" data-bs-target="#modalPandemic">
-                <div class="card-body">
-                    <h5 class="card-title">Pandemic</h5>
-                    <p class="card-text">Capture as peças do adversário.</p>
-                    <p class="card-text">Jogadores: 2-4<br>
-                        Duração: 45-60 min<br>
-                        Categoria: Cooperativo<br>
-                        Período: 3 dias<br>
-                        R$ 30,00</p>
-                    <button class="btn-alugar">🛒 Alugar</button>
-                </div>
-            </div>
+      <div class="col-md-3" data-categoria="estrategia">
+        <div class="card jogo">
+          <img src="img/azul.jpg" class="card-img-top" alt="Azul" data-bs-toggle="modal" data-bs-target="#modalAzul">
+          <div class="card-body">
+            <h5 class="card-title">Azul</h5>
+            <p class="card-text">Jogo de estratégia clássico.</p>
+            <p class="card-text">Jogadores: 2-4<br>
+              Duração: 30-45 min<br>
+              Categoria: Estratégia<br>
+              Período: 3 dias<br>
+              R$ 28,00</p>
+            <button class="btn-comprar" onclick="adicionarCarrinho('Azul', 28)">🛒 Alugar</button>
+          </div>
         </div>
+      </div>
 
-        <div class="col-md-3"  data-categoria="estrategia">
-            <div class="card jogo">
-                <img src="img/monopoly.jpg" class="card-img-top" alt="Monopoly" data-bs-toggle="modal" data-bs-target="#modalMonopoly">
-                <div class="card-body">
-                    <h5 class="card-title">Monopoly</h5>
-                    <p class="card-text">O jogo de tabuleiro favorito de todo mundo.</p>
-                     <p class="card-text">Jogadores: 2-6<br>
-                        Duração: 45-60 min<br>
-                        Categoria: Estratégia<br>
-                        Período: 3 dias<br>
-                        R$ 30,00</p>
-                    <button class="btn-alugar">🛒 Alugar</button>
-                </div>
-            </div>
+      <div class="col-md-3" data-categoria="cooperativo">
+        <div class="card jogo">
+          <img src="img/pandemic.jpg" class="card-img-top" alt="Damas" data-bs-toggle="modal"
+            data-bs-target="#modalPandemic">
+          <div class="card-body">
+            <h5 class="card-title">Pandemic</h5>
+            <p class="card-text">Capture as peças do adversário.</p>
+            <p class="card-text">Jogadores: 2-4<br>
+              Duração: 45-60 min<br>
+              Categoria: Cooperativo<br>
+              Período: 3 dias<br>
+              R$ 30,00</p>
+            <button class="btn-comprar" onclick="adicionarCarrinho('Pandemic', 30)">🛒 Alugar</button>
+          </div>
         </div>
+      </div>
 
-        <div class="col-md-3"  data-categoria="estrategia">
-            <div class="card jogo">
-                <img src="img/xadrez.jpg" class="card-img-top" alt="Xadrez" data-bs-toggle="modal" data-bs-target="#modalXadrez">
-                <div class="card-body">
-                    <h5 class="card-title">Xadrez</h5>
-                    <p class="card-text">Jogo de Xadrez,Damas e Gamão 3 em 1.</p>
-                     <p class="card-text">Jogadores: 2<br>
-                        Duração: 45-60 min<br>
-                        Categoria: Estratégia<br>
-                        Período: 3 dias<br>
-                        R$ 30,00</p>
-                    <button class="btn-alugar">🛒 Alugar</button>
-                </div>
-            </div>
+      <div class="col-md-3" data-categoria="estrategia">
+        <div class="card jogo">
+          <img src="img/monopoly.jpg" class="card-img-top" alt="Monopoly" data-bs-toggle="modal"
+            data-bs-target="#modalMonopoly">
+          <div class="card-body">
+            <h5 class="card-title">Monopoly</h5>
+            <p class="card-text">O jogo de tabuleiro favorito de todo mundo.</p>
+            <p class="card-text">Jogadores: 2-6<br>
+              Duração: 45-60 min<br>
+              Categoria: Estratégia<br>
+              Período: 3 dias<br>
+              R$ 30,00</p>
+            <button class="btn-comprar" onclick="adicionarCarrinho('Monopoly', 30)">🛒 Alugar</button>
+          </div>
         </div>
+      </div>
+
+      <div class="col-md-3" data-categoria="estrategia">
+        <div class="card jogo">
+          <img src="img/xadrez.jpg" class="card-img-top" alt="Xadrez" data-bs-toggle="modal"
+            data-bs-target="#modalXadrez">
+          <div class="card-body">
+            <h5 class="card-title">Xadrez</h5>
+            <p class="card-text">Jogo de Xadrez,Damas e Gamão 3 em 1.</p>
+            <p class="card-text">Jogadores: 2<br>
+              Duração: 45-60 min<br>
+              Categoria: Estratégia<br>
+              Período: 3 dias<br>
+              R$ 35,00</p>
+            <button class="btn-comprar" onclick="adicionarCarrinho('Xadrez', 35)">🛒 Alugar</button>
+          </div>
+        </div>
+      </div>
 
     </div>
 
-    </div>
-<!--Modais-->
-<div class="modal fade" id="modalBanco" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
+  </div>
+  <!--Modais-->
+  <div class="modal fade" id="modalBanco" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
 
-      <!-- HEADER -->
-      <div class="modal-header">
-        <h5 class="modal-title">🎲 Banco Imobiliário</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
+        <!-- HEADER -->
+        <div class="modal-header">
+          <h5 class="modal-title">🎲 Banco Imobiliário</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
 
-      <!-- BODY -->
-      <div class="modal-body">
+        <!-- BODY -->
+        <div class="modal-body">
 
-        <div class="row">
-          
-          <!-- IMAGEM -->
-          <div class="col-md-5 text-center">
-            <img src="img/bancoImobiliario2.webp" 
-                 class="img-fluid rounded shadow-sm mb-3">
-          </div>
+          <div class="row">
 
-          <!-- INFORMAÇÕES -->
-          <div class="col-md-7">
-            <p><strong>Descrição:</strong><br>
-            Um dos jogos de tabuleiro mais famosos do mundo! Em Banco Imobiliário, os jogadores compram, vendem e negociam propriedades com o objetivo de construir um verdadeiro império financeiro. Use estratégia, negociação e um pouco de sorte para levar seus adversários à falência e se tornar o grande vencedor.
+            <!-- IMAGEM -->
+            <div class="col-md-5 text-center">
+              <img src="img/bancoImobiliario2.webp" class="img-fluid rounded shadow-sm mb-3">
+            </div>
 
-            </p>
+            <!-- INFORMAÇÕES -->
+            <div class="col-md-7">
+              <p><strong>Descrição:</strong><br>
+                Um dos jogos de tabuleiro mais famosos do mundo! Em Banco Imobiliário, os jogadores compram, vendem e
+                negociam propriedades com o objetivo de construir um verdadeiro império financeiro. Use estratégia,
+                negociação e um pouco de sorte para levar seus adversários à falência e se tornar o grande vencedor.
 
-            <hr>
+              </p>
 
-            <p><strong>👥 Jogadores:</strong> 2 a 6</p>
-            <p><strong>⏱️ Duração:</strong> 90 minutos</p>
-            <p><strong>🎯 Categoria:</strong> Família / Estratégia</p>
-            <p><strong>📅 Período:</strong> 3 dias</p>
-            <p><strong>🎮 Dificuldade:</strong> Fácil</p>
-            <p><strong>🔞 Idade mínima:</strong> 8+</p>
+              <hr>
 
-            <hr>
+              <p><strong>👥 Jogadores:</strong> 2 a 6</p>
+              <p><strong>⏱️ Duração:</strong> 90 minutos</p>
+              <p><strong>🎯 Categoria:</strong> Família / Estratégia</p>
+              <p><strong>📅 Período:</strong> 3 dias</p>
+              <p><strong>🎮 Dificuldade:</strong> Fácil</p>
+              <p><strong>🔞 Idade mínima:</strong> 8+</p>
 
-            <h4 class="text-success">R$ 20,00</h4>
+              <hr>
+
+              <h4 class="text-success">R$ 20,00</h4>
+            </div>
+
           </div>
 
         </div>
 
-      </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button class="btn btn-success">🛒 Alugar</button>
+        </div>
 
-      <!-- FOOTER -->
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button class="btn btn-success">🛒 Alugar</button>
       </div>
-
     </div>
   </div>
-</div>
-<div class="modal fade" id="modalCatan" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
+  <div class="modal fade" id="modalCatan" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
 
-      <div class="modal-header">
-        <h5 class="modal-title">🌍 Catan</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">
-        <div class="row">
-
-          <div class="col-md-5 text-center">
-            <img src="img/catan.jpg" class="img-fluid rounded shadow-sm mb-3">
-          </div>
-
-          <div class="col-md-7">
-            <p><strong>Descrição:</strong><br>
-            Em Catan, os jogadores assumem o papel de colonizadores em uma ilha rica em recursos. Colete matérias-primas, construa estradas, vilas e cidades enquanto negocia com outros jogadores. Estratégia e planejamento são essenciais para expandir seu território e vencer a partida.
-
-            </p>
-
-            <hr>
-
-            <p><strong>👥 Jogadores:</strong> 3 a 4</p>
-            <p><strong>⏱️ Duração:</strong> 60 a 120 minutos</p>
-            <p><strong>🎯 Categoria:</strong> Estratégia</p>
-            <p><strong>🎮 Dificuldade:</strong> Média</p>
-
-            <hr>
-
-            <h4 class="text-success">R$ 25,00</h4>
-          </div>
-
+        <div class="modal-header">
+          <h5 class="modal-title">🌍 Catan</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-      </div>
 
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button class="btn btn-success">🛒 Alugar</button>
-      </div>
+        <div class="modal-body">
+          <div class="row">
 
+            <div class="col-md-5 text-center">
+              <img src="img/catan.jpg" class="img-fluid rounded shadow-sm mb-3">
+            </div>
+
+            <div class="col-md-7">
+              <p><strong>Descrição:</strong><br>
+                Em Catan, os jogadores assumem o papel de colonizadores em uma ilha rica em recursos. Colete
+                matérias-primas, construa estradas, vilas e cidades enquanto negocia com outros jogadores. Estratégia e
+                planejamento são essenciais para expandir seu território e vencer a partida.
+
+              </p>
+
+              <hr>
+
+              <p><strong>👥 Jogadores:</strong> 3 a 4</p>
+              <p><strong>⏱️ Duração:</strong> 60 a 120 minutos</p>
+              <p><strong>🎯 Categoria:</strong> Estratégia</p>
+              <p><strong>🎮 Dificuldade:</strong> Média</p>
+
+              <hr>
+
+              <h4 class="text-success">R$ 25,00</h4>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button class="btn btn-success">🛒 Alugar</button>
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
-<div class="modal fade" id="modalTicket" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
+  <div class="modal fade" id="modalTicket" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
 
-      <div class="modal-header">
-        <h5 class="modal-title">🚂 Ticket to Ride</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">
-        <div class="row">
-
-          <div class="col-md-5 text-center">
-            <img src="img/ticket.jpg" class="img-fluid rounded shadow-sm mb-3">
-          </div>
-
-          <div class="col-md-7">
-            <p><strong>Descrição:</strong><br>
-            Ticket to Ride é um jogo envolvente onde os jogadores competem para construir rotas ferroviárias entre cidades. Planeje seus caminhos, complete objetivos secretos e bloqueie seus adversários para conquistar o maior número de pontos.
-            </p>
-
-            <hr>
-
-            <p><strong>👥 Jogadores:</strong> 2 a 5</p>
-            <p><strong>⏱️ Duração:</strong> 30 a 60 minutos</p>
-            <p><strong>🎯 Categoria:</strong> Família</p>
-
-            <hr>
-
-            <h4 class="text-success">R$ 25,00</h4>
-          </div>
-
+        <div class="modal-header">
+          <h5 class="modal-title">🚂 Ticket to Ride</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-      </div>
 
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button class="btn btn-success">🛒 Alugar</button>
-      </div>
+        <div class="modal-body">
+          <div class="row">
 
+            <div class="col-md-5 text-center">
+              <img src="img/ticket.jpg" class="img-fluid rounded shadow-sm mb-3">
+            </div>
+
+            <div class="col-md-7">
+              <p><strong>Descrição:</strong><br>
+                Ticket to Ride é um jogo envolvente onde os jogadores competem para construir rotas ferroviárias entre
+                cidades. Planeje seus caminhos, complete objetivos secretos e bloqueie seus adversários para conquistar
+                o maior número de pontos.
+              </p>
+
+              <hr>
+
+              <p><strong>👥 Jogadores:</strong> 2 a 5</p>
+              <p><strong>⏱️ Duração:</strong> 30 a 60 minutos</p>
+              <p><strong>🎯 Categoria:</strong> Família</p>
+
+              <hr>
+
+              <h4 class="text-success">R$ 25,00</h4>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button class="btn btn-success">🛒 Alugar</button>
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
-<div class="modal fade" id="modalWar" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
+  <div class="modal fade" id="modalWar" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
 
-      <div class="modal-header">
-        <h5 class="modal-title">🌍 War</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">
-        <div class="row">
-
-          <div class="col-md-5 text-center">
-            <img src="img/war2.webp" class="img-fluid rounded shadow-sm mb-3">
-          </div>
-
-          <div class="col-md-7">
-            <p><strong>Descrição:</strong><br>
-            War é um jogo clássico de conquista mundial onde os jogadores disputam territórios e batalham pelo domínio global. Planeje seus ataques, fortaleça suas defesas e cumpra seus objetivos estratégicos para vencer.
-
-            </p>
-
-            <hr>
-
-            <p><strong>👥 Jogadores:</strong> 2 a 6</p>
-            <p><strong>⏱️ Duração:</strong> 60 a 120 minutos</p>
-            <p><strong>🎯 Categoria:</strong> Estratégia</p>
-
-            <hr>
-
-            <h4 class="text-success">R$ 25,00</h4>
-          </div>
-
+        <div class="modal-header">
+          <h5 class="modal-title">🌍 War</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-      </div>
 
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button class="btn btn-success">🛒 Alugar</button>
-      </div>
+        <div class="modal-body">
+          <div class="row">
 
+            <div class="col-md-5 text-center">
+              <img src="img/war2.webp" class="img-fluid rounded shadow-sm mb-3">
+            </div>
+
+            <div class="col-md-7">
+              <p><strong>Descrição:</strong><br>
+                War é um jogo clássico de conquista mundial onde os jogadores disputam territórios e batalham pelo
+                domínio global. Planeje seus ataques, fortaleça suas defesas e cumpra seus objetivos estratégicos para
+                vencer.
+
+              </p>
+
+              <hr>
+
+              <p><strong>👥 Jogadores:</strong> 2 a 6</p>
+              <p><strong>⏱️ Duração:</strong> 60 a 120 minutos</p>
+              <p><strong>🎯 Categoria:</strong> Estratégia</p>
+
+              <hr>
+
+              <h4 class="text-success">R$ 25,00</h4>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button class="btn btn-success">🛒 Alugar</button>
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
-<div class="modal fade" id="modalAzul" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
+  <div class="modal fade" id="modalAzul" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
 
-      <div class="modal-header">
-        <h5 class="modal-title">🟦 Azul</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">
-        <div class="row">
-
-          <div class="col-md-5 text-center">
-            <img src="img/azul.jpg" class="img-fluid rounded shadow-sm mb-3">
-          </div>
-
-          <div class="col-md-7">
-            <p><strong>Descrição:</strong><br>
-            Em Azul, os jogadores competem para criar belos padrões de azulejos em seus tabuleiros. Com mecânicas simples e estratégicas, o jogo combina planejamento e tomada de decisão para conquistar a maior pontuação.
-
-            </p>
-
-            <hr>
-
-            <p><strong>👥 Jogadores:</strong> 2 a 4</p>
-            <p><strong>⏱️ Duração:</strong> 30 a 45 minutos</p>
-            <p><strong>🎯 Categoria:</strong> Estratégia</p>
-
-            <hr>
-
-            <h4 class="text-success">R$ 25,00</h4>
-          </div>
-
+        <div class="modal-header">
+          <h5 class="modal-title">🟦 Azul</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-      </div>
 
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button class="btn btn-success">🛒 Alugar</button>
-      </div>
+        <div class="modal-body">
+          <div class="row">
 
+            <div class="col-md-5 text-center">
+              <img src="img/azul.jpg" class="img-fluid rounded shadow-sm mb-3">
+            </div>
+
+            <div class="col-md-7">
+              <p><strong>Descrição:</strong><br>
+                Em Azul, os jogadores competem para criar belos padrões de azulejos em seus tabuleiros. Com mecânicas
+                simples e estratégicas, o jogo combina planejamento e tomada de decisão para conquistar a maior
+                pontuação.
+
+              </p>
+
+              <hr>
+
+              <p><strong>👥 Jogadores:</strong> 2 a 4</p>
+              <p><strong>⏱️ Duração:</strong> 30 a 45 minutos</p>
+              <p><strong>🎯 Categoria:</strong> Estratégia</p>
+
+              <hr>
+
+              <h4 class="text-success">R$ 25,00</h4>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button class="btn btn-success">🛒 Alugar</button>
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
-<div class="modal fade" id="modalPandemic" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
+  <div class="modal fade" id="modalPandemic" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
 
-      <div class="modal-header">
-        <h5 class="modal-title">🦠 Pandemic</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">
-        <div class="row">
-
-          <div class="col-md-5 text-center">
-            <img src="img/pandemic.jpg" class="img-fluid rounded shadow-sm mb-3">
-          </div>
-
-          <div class="col-md-7">
-            <p><strong>Descrição:</strong><br>
-            Pandemic é um jogo cooperativo onde todos os jogadores trabalham juntos para conter surtos de doenças pelo mundo. Cada participante possui habilidades únicas e deve colaborar para encontrar curas antes que seja tarde demais.
-
-            </p>
-
-            <hr>
-
-            <p><strong>👥 Jogadores:</strong> 2 a 4</p>
-            <p><strong>⏱️ Duração:</strong> 45 a 60 minutos</p>
-            <p><strong>🎯 Categoria:</strong> Cooperativo</p>
-
-            <hr>
-
-            <h4 class="text-success">R$ 30,00</h4>
-          </div>
-
+        <div class="modal-header">
+          <h5 class="modal-title">🦠 Pandemic</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-      </div>
 
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button class="btn btn-success">🛒 Alugar</button>
-      </div>
+        <div class="modal-body">
+          <div class="row">
 
+            <div class="col-md-5 text-center">
+              <img src="img/pandemic.jpg" class="img-fluid rounded shadow-sm mb-3">
+            </div>
+
+            <div class="col-md-7">
+              <p><strong>Descrição:</strong><br>
+                Pandemic é um jogo cooperativo onde todos os jogadores trabalham juntos para conter surtos de doenças
+                pelo mundo. Cada participante possui habilidades únicas e deve colaborar para encontrar curas antes que
+                seja tarde demais.
+
+              </p>
+
+              <hr>
+
+              <p><strong>👥 Jogadores:</strong> 2 a 4</p>
+              <p><strong>⏱️ Duração:</strong> 45 a 60 minutos</p>
+              <p><strong>🎯 Categoria:</strong> Cooperativo</p>
+
+              <hr>
+
+              <h4 class="text-success">R$ 30,00</h4>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button class="btn btn-success">🛒 Alugar</button>
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
-<div class="modal fade" id="modalMonopoly" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
+  <div class="modal fade" id="modalMonopoly" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
 
-      <div class="modal-header">
-        <h5 class="modal-title"> Monopoly</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">
-        <div class="row">
-
-          <div class="col-md-5 text-center">
-            <img src="img/monopoly.jpg" class="img-fluid rounded shadow-sm mb-3">
-          </div>
-
-          <div class="col-md-7">
-            <p><strong>Descrição:</strong><br>
-            Monopoly é um dos jogos de tabuleiro mais famosos do mundo, onde o objetivo é construir um império imobiliário e levar seus adversários à falência. Compre propriedades, construa casas e hotéis, cobre aluguel e tome decisões estratégicas para dominar o jogo. Sorte e planejamento caminham juntos nessa disputa cheia de reviravoltas.
-
-            </p>
-
-            <hr>
-
-            <p><strong>👥 Jogadores:</strong> 2 a 4</p>
-            <p><strong>⏱️ Duração:</strong> 45 a 60 minutos</p>
-            <p><strong>🎯 Categoria:</strong> Cooperativo</p>
-
-            <hr>
-
-            <h4 class="text-success">R$ 30,00</h4>
-          </div>
-
+        <div class="modal-header">
+          <h5 class="modal-title"> Monopoly</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-      </div>
 
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button class="btn btn-success">🛒 Alugar</button>
-      </div>
+        <div class="modal-body">
+          <div class="row">
 
+            <div class="col-md-5 text-center">
+              <img src="img/monopoly.jpg" class="img-fluid rounded shadow-sm mb-3">
+            </div>
+
+            <div class="col-md-7">
+              <p><strong>Descrição:</strong><br>
+                Monopoly é um dos jogos de tabuleiro mais famosos do mundo, onde o objetivo é construir um império
+                imobiliário e levar seus adversários à falência. Compre propriedades, construa casas e hotéis, cobre
+                aluguel e tome decisões estratégicas para dominar o jogo. Sorte e planejamento caminham juntos nessa
+                disputa cheia de reviravoltas.
+
+              </p>
+
+              <hr>
+
+              <p><strong>👥 Jogadores:</strong> 2 a 4</p>
+              <p><strong>⏱️ Duração:</strong> 45 a 60 minutos</p>
+              <p><strong>🎯 Categoria:</strong> Cooperativo</p>
+
+              <hr>
+
+              <h4 class="text-success">R$ 30,00</h4>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button class="btn btn-success">🛒 Alugar</button>
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
-<div class="modal fade" id="modalXadrez" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
+  <div class="modal fade" id="modalXadrez" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
 
-      <div class="modal-header">
-        <h5 class="modal-title"> Xadrez</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">
-        <div class="row">
-
-          <div class="col-md-5 text-center">
-            <img src="img/xadrez.jpg" class="img-fluid rounded shadow-sm mb-3">
-          </div>
-
-          <div class="col-md-7">
-            <p><strong>Descrição:</strong><br>
-            Um dos jogos de estratégia mais antigos e respeitados do mundo. No Xadrez, cada movimento conta. Planeje suas jogadas, antecipe o adversário e utilize sua inteligência para dar o xeque-mate final.
-
-            </p>
-
-            <hr>
-
-            <p><strong>👥 Jogadores:</strong> 2 a 4</p>
-            <p><strong>⏱️ Duração:</strong> 45 a 60 minutos</p>
-            <p><strong>🎯 Categoria:</strong> Cooperativo</p>
-
-            <hr>
-
-            <h4 class="text-success">R$ 30,00</h4>
-          </div>
-
+        <div class="modal-header">
+          <h5 class="modal-title"> Xadrez</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-      </div>
 
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button class="btn btn-success">🛒 Alugar</button>
-      </div>
+        <div class="modal-body">
+          <div class="row">
 
+            <div class="col-md-5 text-center">
+              <img src="img/xadrez.jpg" class="img-fluid rounded shadow-sm mb-3">
+            </div>
+
+            <div class="col-md-7">
+              <p><strong>Descrição:</strong><br>
+                Um dos jogos de estratégia mais antigos e respeitados do mundo. No Xadrez, cada movimento conta. Planeje
+                suas jogadas, antecipe o adversário e utilize sua inteligência para dar o xeque-mate final.
+
+              </p>
+
+              <hr>
+
+              <p><strong>👥 Jogadores:</strong> 2 a 4</p>
+              <p><strong>⏱️ Duração:</strong> 45 a 60 minutos</p>
+              <p><strong>🎯 Categoria:</strong> Cooperativo</p>
+
+              <hr>
+
+              <h4 class="text-success">R$ 30,00</h4>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button class="btn btn-success">🛒 Alugar</button>
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
-    
-   
-    
 
-    <div id="footer"></div>
 
-    <!-- VLibras -->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
+
+  <!-- rodapé -->
+  <div id="footer"></div>
+
+
+
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
     </div>
+  </div>
 
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget();
-    </script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget();
+  </script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/acessibilidade.js"></script>
-    <script src="js/loadComponents.js"></script>
-    <script src="js/index.js"></script>
-    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/acessibilidade.js"></script>
+  <script src="js/loadComponents.js"></script>
+  <script src="js/catalogo.js"></script>
+  <script src="js/carrinho.js"></script>
+
+
 </body>
+
 </html>
