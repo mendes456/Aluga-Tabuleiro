@@ -1,0 +1,319 @@
+/* 1. RESET E CONFIGURAÇÕES GERAIS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 12px; /* Fonte 12 conforme solicitado */
+}
+
+body {
+    background-color: #ffffff;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* BARRA DE ACESSIBILIDADE */
+.barra-acessibilidade {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 8px 0;
+}
+
+.barra-acessibilidade button {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    margin: 0 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.barra-acessibilidade button:hover {
+    background-color: #e9ecef;
+}
+
+/* Estilos para modo escuro */
+.dark-mode {
+    background-color: #121212 !important;
+    color: #f4f4f4 !important;
+}
+
+.dark-mode .painel-header {
+    border-bottom-color: #333;
+}
+
+.dark-mode nav a {
+    color: #cccccc;
+}
+
+.dark-mode nav a:hover {
+    color: #f56a07;
+}
+
+.dark-mode header h1,
+.dark-mode h2 {
+    color: #f56a07;
+}
+
+.dark-mode .field-wrapper {
+    background-color: #2a2a2a;
+    border-color: #555;
+}
+
+.dark-mode .field-wrapper input {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.dark-mode label {
+    color: #cccccc;
+}
+
+.dark-mode button[type="submit"] {
+    background-color: #f56a07;
+    color: #ffffff;
+}
+
+.dark-mode button[type="submit"]:hover {
+    background-color: #d45a05;
+}
+
+.dark-mode table th {
+    background-color: #1e1e1e;
+    color: #f56a07;
+    border-bottom-color: #333;
+}
+
+.dark-mode table td {
+    border-bottom-color: #333;
+}
+
+.dark-mode tbody tr:hover {
+    background-color: #2a2a2a;
+}
+
+.dark-mode footer {
+    color: #cccccc;
+}
+
+/* 2. CONTAINER CENTRALIZADOR (O segredo do alinhamento) */
+header, 
+main section, 
+footer {
+    max-width: 900px; /* Largura máxima idêntica para todos */
+    margin: 0 auto;   /* Centraliza horizontalmente */
+    padding: 20px 40px;
+    width: 100%;
+}
+
+/* 3. NAVEGAÇÃO SUPERIOR */
+.painel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.painel-header .login-logo {
+    width: 110px;
+    max-width: 140px;
+    margin: 0;
+}
+
+.painel-header nav {
+    flex: 1;
+    margin-left: 30px;
+}
+
+nav {
+    background: transparent;
+    border: none;
+}
+
+nav ul {
+    max-width: 900px;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #666666;
+    font-weight: bold;
+    font-size: 14px; /* +2px em relação à base */
+    transition: 0.3s;
+}
+
+.painel-boas-vindas h1 {
+    margin-bottom: 10px;
+}
+
+.painel-boas-vindas p {
+    margin-bottom: 24px;
+}
+
+nav a:hover {
+    color: #f56a07;
+}
+
+/* 4. CABEÇALHO E TÍTULOS */
+header h1 {
+    color: #f56a07;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.login-logo {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #f56a07;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-left: 4px solid #f56a07;
+    padding-left: 12px;
+}
+
+/* 5. TABELA DE PEDIDOS (LIMPA E MODERNA) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+caption {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #fcfcfc;
+    color: #f56a07;
+    text-align: left;
+    padding: 12px;
+    border-bottom: 2px solid #eee;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background-color: #fffaf5;
+}
+
+/* 6. FORMULÁRIO (MEUS DADOS) */
+#updateForm {
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+/* Estilo Field-Wrapper (Igual ao Cadastro) */
+.field-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.field-wrapper input {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 12px;
+    background: transparent;
+}
+
+/* 7. FLEXBOX (CAMPOS LADO A LADO) */
+.row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.flex-1 { flex: 1; }
+.flex-2 { flex: 2; }
+.flex-3 { flex: 3; }
+
+/* 8. AUXILIARES */
+input:disabled {
+    background-color: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+}
+
+input[readonly] {
+    background-color: #fcfcfc;
+}
+
+.error-msg {
+    color: #e74c3c;
+    font-size: 11px;
+    margin-top: 4px;
+    display: block;
+}
+
+small {
+    display: block;
+    margin-top: 4px;
+    color: #999;
+}
+
+/* 9. BOTÃO SALVAR */
+button[type="submit"] {
+    background-color: #f56a07;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #d45a05;
+}
+
+footer {
+    text-align: center;
+    color: #bbb;
+    margin-top: 40px;
+}

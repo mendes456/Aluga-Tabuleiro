@@ -1,0 +1,178 @@
+﻿* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+
+body { 
+    background-color: #ffffff; 
+    min-height: 100vh; 
+    padding: 20px;
+}
+
+/* Estilos para modo escuro no body */
+.dark-mode {
+    background-color: #121212 !important;
+    color: #f4f4f4 !important;
+}
+
+.dark-mode .login-page {
+    background-color: transparent;
+}
+
+.dark-mode .login-container {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+}
+
+.dark-mode .login-container header h1,
+.dark-mode .login-container header p,
+.dark-mode header h1,
+.dark-mode header p {
+    color: #f4f4f4;
+}
+
+.dark-mode .field-wrapper {
+    background-color: #2a2a2a;
+    border-color: #555;
+}
+
+.dark-mode .field-wrapper input {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.dark-mode label {
+    color: #cccccc;
+}
+
+.dark-mode .btn-submit {
+    background-color: #f56a07;
+    color: #ffffff;
+}
+
+.dark-mode .btn-submit:hover {
+    background-color: #d45a05;
+}
+
+.dark-mode .signup-footer {
+    color: #cccccc;
+}
+
+.dark-mode .signup-footer a,
+.dark-mode .forgot-link {
+    color: #f56a07;
+}
+
+.dark-mode footer {
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+}
+
+/*Espaçamento do container para a página*/
+.login-page {
+    /* Ajuste o valor (80px, 100px...) de acordo com a altura do seu Header */
+    padding-top: 220px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 60px 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: none;
+}
+
+.login-container header h1 {
+    margin-bottom: 10px;
+}
+
+.login-container header p {
+    margin-bottom: 20px;
+}
+
+.login-container .input-group:first-of-type {
+    margin-top: 14px;
+}
+
+.input-group { margin-bottom: 20px; display: flex; flex-direction: column; }
+label { font-weight: 600; color: #444; margin-bottom: 8px; font-size: 0.875rem; }
+
+.field-wrapper {
+    height: 50px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    transition: 0.3s;
+}
+
+/* ESTADOS DE VALIDAÇÃO */
+.field-wrapper.error-state { border-color: #e74c3c !important; background-color: #fff8f8; }
+.field-wrapper.valid-state { border-color: #2ecc71 !important; }
+
+.field-wrapper input {
+    flex: 1; height: 100%; border: none; outline: none;
+    padding: 0 15px; font-size: 1rem; background: transparent;
+}
+
+.field-wrapper input:focus {
+    outline: 2px solid #f56a07;
+    outline-offset: 2px;
+}
+
+.toggle-btn { background: none; border: none; cursor: pointer; padding: 0 15px; font-size: 1.125rem; color: #777; }
+
+.toggle-btn:focus {
+    outline: 2px solid #f56a07;
+    outline-offset: 2px;
+}
+
+.options { text-align: right; margin-top: -8px; margin-bottom: 20px; }
+.forgot-link { color: #f56a07; font-size: 0.8125rem; text-decoration: none; font-weight: 500; }
+
+.forgot-link:focus {
+    outline: 2px solid #f56a07;
+    outline-offset: 2px;
+}
+
+.error-msg { color: #e74c3c; font-size: 0.75rem; margin-top: 5px; min-height: 15px; display: block; }
+
+.btn-submit {
+    width: 100%; padding: 16px; background-color: #f56a07;
+    color: white; border: none; border-radius: 8px;
+    font-size: 1.0625rem; font-weight: bold; cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover { background-color: #d45a05; }
+
+.btn-submit:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.signup-footer { text-align: center; margin-top: 30px; color: #555; font-size: 0.875rem; }
+.signup-footer a { color: #f56a07; font-weight: bold; text-decoration: none; }
+
+.signup-footer a:focus {
+    outline: 2px solid #f56a07;
+    outline-offset: 2px;
+}
+
+.login-logo {
+    width: 100px;
+    height: auto;
+    max-width: 140px;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+/* Estilos para o footer não seguir a margem da página */
+footer {
+    margin: 0 -20px; /* Remove a margem lateral equivalente ao padding do body */
+    padding: 0; /* Garante que não haja padding interno adicional */
+    width: calc(100% + 40px); /* Ajusta a largura para compensar a margem negativa */
+}
