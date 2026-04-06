@@ -37,7 +37,7 @@
 
    /* Nav links */
    .nav-link {
-       font-size: 18px;
+       font-size: 1.125rem;
        font-weight: 600;
        color: var(--marrom);
 
@@ -66,7 +66,7 @@
    }
 
    .btn-carrinho i {
-       font-size: 20px;
+       font-size: 1.25rem;
    }
 
    /* Botão login */
@@ -76,7 +76,7 @@
        padding: 8px 18px;
        border-radius: 6px;
        font-weight: 600;
-       font-size: 18px;
+       font-size: 1.125rem;
        text-decoration: none;
    }
 
@@ -108,7 +108,7 @@
        background-color: white;
        padding: 5px 0;
        padding-left: 120px;
-       font-size: 14px;
+       font-size: 0.875rem;
        border-bottom: 1px solid #f2f3ec;
    }
 
