@@ -1,0 +1,117 @@
+:root {
+    --amarelo: #f7d12a;
+    --amarelo-claro: #E1C78C;
+    --laranja: #d86d26;
+    --laranja-hover: #ff8a3d;
+    --marrom-claro: #7A6949;
+    --marrom: #443c2d;
+    --verde: #28a745;
+    --verde-hover: #218838;
+}
+
+/* Fundo geral da página desta política */
+body {
+    background-color: #f9f3e5; /* tom bem claro, próximo ao amarelo/creme */
+}
+
+/* Área principal da política */
+main {
+    min-height: 60vh;
+}
+
+/* Seção de política: caixa centralizada, com leve destaque */
+.politica-container,
+.container.politica-container {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Ajuste para usar a classe no HTML atual (coluna principal) */
+.col-lg-10 {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Título principal */
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--marrom);
+}
+
+/* Subtítulos das seções (1., 2., 3., etc.) */
+h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--laranja);
+}
+
+/* Parágrafos */
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4f4a3c;
+}
+
+/* Texto auxiliar já vem com .text-muted do Bootstrap,
+   aqui só reforçamos um tom dentro da paleta */
+.text-muted {
+    color: var(--marrom-claro) !important;
+}
+
+/* Listas */
+article ul {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+article ul li {
+    margin-bottom: 0.35rem;
+    color: #4f4a3c;
+}
+
+/* Pequeno destaque visual nos artigos (espaçamento entre blocos) */
+article {
+    border-left: 4px solid rgba(216, 109, 38, 0.15); /* laranja bem suave */
+    padding-left: 12px;
+}
+
+/* Footer interno do texto da política */
+article + footer,
+footer.mt-5 {
+    border-top: 1px solid rgba(122, 105, 73, 0.2);
+    padding-top: 15px;
+}
+
+/* Links dentro da política (caso futuramente haja) */
+.politica-container a,
+.col-lg-10 a {
+    color: var(--laranja);
+    text-decoration: underline;
+}
+
+.politica-container a:hover,
+.col-lg-10 a:hover {
+    color: var(--laranja-hover);
+    text-decoration: none;
+}
+
+/* Responsividade simples */
+@media (max-width: 767.98px) {
+    .col-lg-10 {
+        padding: 25px 18px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+    }
+}
