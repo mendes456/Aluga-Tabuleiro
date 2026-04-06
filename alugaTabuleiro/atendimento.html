@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/atendimento.css">
+    <script src="js/catalogo.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+   
+<!--TÍTULO-->
+<div class="container text-center my-5">
+    <h1>Como podemos ajudar?</h1>
+    <p>Estamos aqui para tornar sua experiência incrível.Escolha a melhor forma de entrar<br> em contato.</p>
+</div>
+
+<!-- CONTATOS -->
+<div class="container">
+      <div class="row justify-content-center g-4">  
+         <div class="col-md-3 d-flex">
+            <div class="card whatsapp text-center p-3">
+                <i class="bi bi-whatsapp fs-1"></i>
+                    <h5 class="card-title">WhatsApp</h5>
+                    <p class="card-text">Atendimento rápido e direto<br>pelo WhatsApp</p>
+                    <p class="telefone">(21) 99999-9999</p>
+                <p><i class="bi bi-clock"></i>Seg-Sex: 9h às 18h</p>
+                </div>
+            </div>
+        
+         <div class="col-md-3 d-flex">
+            <div class="card email text-center p-3">
+                    <i class="bi bi-envelope fs-1"></i>
+                    <h5>E-mail</h5>
+                    <p>Envie sua dúvida por e-mail</p>
+                    <p>contato@alugatabuleiro.com</p>
+                    <p><i class="bi bi-clock"></i>Resposta em até 24h</p>
+                </div>
+            </div>
+         
+         <div class="col-md-3 d-flex">
+                <div class="card telefone-card text-center p-3">
+                    <i class="bi bi-telephone fs-1"></i>
+                    <h5>Telefone</h5>
+                    <p>Ligue e fale com nossa equipe</p>
+                    <p>(21)99999-9999</p>   
+                    <p><i class="bi bi-clock"></i>Seg-Sex: 9h às 18h</p>
+                </div>
+            </div>        
+        </div>
+      </div>  
+    </div>
+<!-- FORMULÁRIO -->
+<div class="container my-5">
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            <div class="card p-4">
+                <h5 class="card-title">Envie sua Mensagem</h5>
+                    <p class="card-text">Responderemos o mais breve possível</p>
+
+                    <label for="">Nome Completo</label>
+                    <input type="text" class="form-control mb-2" placeholder="nome completo" required>
+
+                    <label for="">E-mail</label>
+                    <input type="text" class="form-control mb-2" placeholder="seu@email.com" required>
+
+                    <label for="">Número do Pedido(opcional)</label>
+                    <input type="number" class="form-control mb-2" placeholder="nome completo" required>
+
+                    <label for="assunto">Assunto</label>
+                    <select name="assunto" id="assunto">
+                        <option value="Selecione um assunto">Selecione um assunto</option>
+                        <option value="Duvidas sobre a compra">Dúvidas sobre a compra</option>
+                        <option value="Status do pedido">Status do pedido</option>
+                        <option value="Problema com entrega">Problema com entrega</option>
+                        <option value="Problema com o jogo">Problema com o jogo</option>
+                        <option value="Cancelamento">Cancelamento</option>
+                        <option value="Questão de pagamento">Questão de pagamento</option>
+                        <option value="Solicitar troca">Solicitar troca</option>
+                        <option value="Outros assuntos">Outros assuntos</option>
+                    </select>
+
+                    <label for="">Mensagem</label>
+                    <textarea class="form-control mb-3"></textarea>
+
+                    <button class="btn btn-primary">
+                        <i class="bi bi-send"></i>Enviar Mensagem
+                    </button>
+                    <br><br>
+            </div>
+        </div>
+
+        <!-- HORÁRIO -->
+         <div class="col-md-6">
+            <div class="card p-4">
+                <h5>Horário de Atendimento</h5>
+                <p>Segunda a Sexta 9h às 18h</p>
+                <p>Sábado 9h às 13h</p>
+                <p>Domingo e Feriados Fechado</p>
+                <p>Dica:<small>Mensagens enviadas fora do horário de atendimento serão respondidas no próximo dia útil.</small></p>
+                
+            </div>
+         </div>
+
+          <div class="col-md-6 ms-auto" style="margin-top: -295px;">
+            <div class="card p-4">
+                <h5>Nosso endereço</h5>
+                <p>Aluguel de Tabuleiro<br>Rua dos Jogos,123<br>Bairro das Flores<br>São Paulo,SP - CEP 01234-567</p>
+                <p><i>Importante : </i>Este é nosso endereço administrativo.Não recebemos clientes presencialmente.Todo atendimento é online.</p>
+                <p>Domingo e Feriados Fechado</p>
+            </div>
+         </div>
+    </div>
+</div>
+
+<!-- FAQ -->
+ <div class="container my-5">
+    <h2 class="text-center mb-4">Perguntas Frequentes</h2>
+    <p class="text-center mb-4">Respostas rápidas para as dúvidas mais comuns.</p>        
+        <div class="row g-4">
+            <div class="col-md-4 d-flex">
+                <div class="card p-3">
+                  <h6>Como funciona?</h6>
+                  <p>Escolha seu plano,selecione os jogos desejados e receba em casa.Quando quiser trocar,solicite a troca pelo site e enviaremos os novos jogos junto com a etiqueta de devolução deos anteriores.</p>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card p-3">
+                  <h6>Quantas trocas posso fazer?</h6>
+                  <p>Todos os planos têm trocas ilimitadas! A diferença está no número de jogos simultâneos e no período mínimo de cada aluguel (15 dias no Básico, 30 dias no Plus, e sem limite no Premium).</p>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card p-3">
+                  <h6>Quais formas de pagamento aceitas?</h6>
+                  <p>Aceitamos cartão de crédito (com renovação automática), PIX e boleto bancário. No cartão de crédito, a cobrança é mensal. PIX e boleto precisam ser renovados manualmente a cada mês.</p>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card p-3">
+                  <h6>Qual o prazo de entrega?</h6>
+                  <p>O prazo é de 3 a 7 dias úteis após a confirmação do pedido. Enviamos para todo o Brasil com frete grátis em todos os planos. Você recebe um código de rastreamento assim que o jogo for despachado.</p>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card p-3">
+                  <h6>E se o jogo chegar danificado?</h6>
+                  <p>Se receber um jogo danificado ou com peças faltantes, entre em contato imediatamente. Faremos a substituição sem custo adicional. Tire fotos da embalagem e do jogo ao receber.</p>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card p-3">
+                  <h6>Como faço para devolver os jogos?</h6>
+                  <p>Quando solicitar uma troca, enviamos uma etiqueta de devolução junto com os novos jogos. Basta colocar o jogo anterior na caixa, colar a etiqueta e postar nos Correios.</p>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card p-3">
+                  <h6>Posso cancelar minha assinatura?</h6>
+                  <p>Sim! Você pode cancelar a qualquer momento. O cancelamento terá efeito ao final do período já pago. Você terá 7 dias após o término para devolver os jogos.</p>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card p-3">
+                  <h6>O que acontece se eu atrasar o pagamento?</h6>
+                  <p>Sua assinatura será suspensa até a regularização. Após 30 dias de atraso, poderemos cancelar a assinatura e cobrar multa de 2% + juros de 1% ao mês sobre o valor devido.</p>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card p-3">
+                  <h6>Ainda não encontrou o que procura?</h6>
+                  <p>Nossa equipe está pronta para ajudar! Entre em contato pelos nossos canais de atendimento e teremos prazer em resolver sua dúvida.</p>
+                </div>
+            </div>
+        </div>        
+    </div>
+    
+    <div class="container my-5">
+      <div class="row justify-content-center">
+       <div class="col-md-6">
+            <div class="card p-4 text-center">
+                
+                <div class="ajuda">
+                    <h2 class="card-title">Ainda não encontrou o que procura?</h2>
+                    <p class="card-text">Nossa equipe está pronta para ajudar! Entre em contato pelos nossos canais de atendimento e teremos prazer em resolver sua dúvida.</p>
+            
+                </div>
+                <div class="whatsapp">
+                    <a href="">WhatsApp</a>
+                    <a href="Planos">Ver Planos</a>
+                </div>
+            </div>
+        </div>
+      </div>  
+
+    </div>
+    
+
+    
+   
+    
+
+    <div id="footer"></div>
+
+    <!-- VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget();
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/acessibilidade.js"></script>
+    <script src="js/loadComponents.js"></script>
+    <script src="js/index.js"></script>
+    
+</body>
+</html>
