@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // 1. Validação Nome (10-80 letras)
+    // 1. Validação Nome)
     document.getElementById('nome').addEventListener('blur', (e) => {
-        const regex = /^[A-Za-zÀ-ÿ\s]{10,80}$/;
-        updateUI('nomeWrapper', 'nomeError', regex.test(e.target.value), "O nome deve ter entre 10 e 80 caracteres (apenas letras).");
+        const regex = /^[A-Za-zÀ-ÿ\s]{10,50}$/;
+        updateUI('nomeWrapper', 'nomeError', regex.test(e.target.value), "O nome deve ter entre 10 e 50 caracteres (apenas letras).");
     });
 
     // 2. Validação Email

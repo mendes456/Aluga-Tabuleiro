@@ -62,22 +62,55 @@
     <script src="js/loadComponents.js"></script>
 
     <script>
+        const updateStatus = (wrapperId, errorId, isValid, message = "") => {
+            const wrapper = document.getElementById(wrapperId);
+            const errorSpan = document.getElementById(errorId);
+            if (wrapper) {
+                wrapper.classList.toggle('error-state', !isValid);
+                wrapper.classList.toggle('valid-state', isValid);
+            }
+            if (errorSpan) {
+                errorSpan.textContent = message;
+            }
+        };
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailField = document.getElementById('email');
+        const emailError = document.getElementById('emailError');
         const recoverForm = document.getElementById('recoverForm');
+
+        const validateEmail = () => {
+            const email = emailField.value.trim();
+            const isValid = emailRegex.test(email);
+            updateStatus('emailWrapper', 'emailError', isValid, isValid ? '' : 'Digite um e-mail no formato nome@dominio.com.');
+            emailField.setAttribute('aria-invalid', String(!isValid));
+            return isValid;
+        };
+
+        if (emailField) {
+            emailField.addEventListener('blur', validateEmail);
+            emailField.addEventListener('input', () => {
+                if (emailField.value.length > 0) {
+                    validateEmail();
+                } else {
+                    const wrapper = document.getElementById('emailWrapper');
+                    const errorSpan = document.getElementById('emailError');
+                    if (wrapper) wrapper.classList.remove('error-state', 'valid-state');
+                    if (errorSpan) errorSpan.textContent = '';
+                    emailField.removeAttribute('aria-invalid');
+                }
+            });
+        }
+
         if (recoverForm) {
             recoverForm.addEventListener('submit', (e) => {
                 e.preventDefault();
-                const emailField = document.getElementById('email');
-                const emailError = document.getElementById('emailError');
-                const email = emailField.value.trim();
-
-                if (!email) {
-                    emailError.textContent = 'Preencha o e-mail cadastrado.';
+                if (!validateEmail()) {
                     emailField.focus();
                     return;
                 }
 
-                emailError.textContent = '';
-                alert(`Um link de recuperação foi enviado para: ${email}`);
+                alert(`Um link de recuperação foi enviado para: ${emailField.value.trim()}`);
                 window.location.href = 'login.html';
             });
         }
