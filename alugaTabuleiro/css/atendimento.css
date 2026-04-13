@@ -25,12 +25,111 @@ body{
     cursor: pointer;
 }
 
-/*.card:nth-child(2):hover {
-    border-bottom: 4px solid #6f42c1;
+/* ===================== */
+/* 🌙 DARK MODE */
+/* ===================== */
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
 }
 
-.card:nth-child(3):hover {
-    border-bottom: 4px solid #0d6efd;
+/* BODY */
+.dark-mode body {
+    background-color: #121212;
+}
+
+/* CARDS */
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #333;
+}
+
+/* TEXTO DOS CARDS */
+.dark-mode .card p,
+.dark-mode .card h5 {
+    color: #cccccc;
+}
+
+/* ÍCONES (mantém cor mas suaviza um pouco se quiser) */
+.dark-mode .whatsapp i {
+    color: #25D366;
+}
+
+.dark-mode .email i {
+    color: #9b6bff;
+}
+
+.dark-mode .telefone-card i {
+    color: #4da3ff;
+}
+
+/* HOVER DOS CARDS */
+.dark-mode .card:nth-child(1):hover {
+    border-bottom: 4px solid #ff8a3d;
+}
+
+/* INPUTS (caso tenha) */
+.dark-mode input {
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid #444;
+}
+
+/* PLACEHOLDER */
+.dark-mode input::placeholder {
+    color: #bbbbbb;
+    opacity: 1;
+}
+
+/* CAMPOS DE FORMULÁRIO PADRÃO */
+input,
+textarea {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 6px;
+    width: 100%;
+}
+
+/* DARK MODE */
+.dark-mode input,
+.dark-mode textarea {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+/* PLACEHOLDER */
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+    color: #bbbbbb;
+}
+
+/* campo assunto */
+/* SELECT (campo assunto) */
+select {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 6px;
+    width: 100%;
+}
+
+/* DARK MODE */
+.dark-mode select {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border: 1px solid #444 !important;
+}
+
+/* OPÇÕES DO SELECT */
+.dark-mode select option {
+    background-color: #1e1e1e;
+    color: #ffffff;
 }
 
 
