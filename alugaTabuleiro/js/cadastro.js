@@ -16,9 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Validação Nome)
     document.getElementById('nome').addEventListener('blur', (e) => {
-        const regex = /^[A-Za-zÀ-ÿ\s]{10,50}$/;
-        updateUI('nomeWrapper', 'nomeError', regex.test(e.target.value), "O nome deve ter entre 10 e 50 caracteres (apenas letras).");
-    });
+    const regex = /^[A-Za-zÀ-ÿ\s]{5,20}$/;
+    // O regex.test verificará se o valor atende aos novos requisitos
+    const isValid = regex.test(e.target.value);    
+    // Atualizamos a mensagem para refletir a nova regra
+    updateUI(
+        'nomeWrapper', 
+        'nomeError', 
+        isValid, 
+        "O nome deve ter entre 5 e 20 caracteres (apenas letras)."
+    );
+});
 
     // 2. Validação Email
     document.getElementById('email').addEventListener('blur', (e) => {
