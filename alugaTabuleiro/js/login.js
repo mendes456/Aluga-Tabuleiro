@@ -50,34 +50,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Validação de Senha em tempo real
-    passwordInput.addEventListener('input', validatePassword);
+    // --- 2. LÓGICA DE LOGIN (SUBMIT) ---
+    if (loginForm) {
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const email = emailInput.value.trim();
+            const senha = passwordInput.value;
 
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        console.log('Botão clicado! Tentando validar...');
+            // Chama a função global do database.js
+            if (typeof autenticarUsuario === "function") {
+                if (autenticarUsuario(email, senha)) {
+                    // Importante: use o nome exato do seu arquivo de destino
+                    window.location.href = "painel_user.html"; 
+                } else {
+                    alert("Usuário ou senha não encontrados.");
+                }
+            } else {
+                alert("Erro técnico: Banco de dados não carregado.");
+            }
+        });
+    }
 
-        const email = emailInput.value.trim();
-        const senha = passwordInput.value;
-        const isEmailValid = validateEmail();
-        const isPasswordValid = validatePassword();
-
-        if (!isEmailValid) {
-            emailInput.focus();
-            return;
-        }
-
-        if (!isPasswordValid) {
-            passwordInput.focus();
-            return;
-        }
-
-        if (autenticarUsuario(email, senha)) {
-            console.log('Usuário ok! Redirecionando...');
-            window.location.href = 'painel_user.html';
-        } else {
-            console.log('Erro: Usuário não encontrado no localStorage');
-            alert('E-mail ou senha incorretos.');
-        }
-    });
 });

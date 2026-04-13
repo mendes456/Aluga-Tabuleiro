@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const user = obterUsuarioLogado();
 
     if (!user) {
-        window.location.href = "Login3.html";
+        window.location.href = "login.html";
         return;
     }
 
@@ -49,7 +49,7 @@ function renderizarPedidos() {
 document.addEventListener('DOMContentLoaded', () => {
     const user = obterUsuarioLogado();
     if (!user) {
-        window.location.href = "Login3.html";
+        window.location.href = "login.html";
         return;
     }
 

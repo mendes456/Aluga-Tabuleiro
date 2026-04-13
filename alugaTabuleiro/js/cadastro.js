@@ -110,12 +110,28 @@ if (btnToggle && passwordInput && confirmPasswordInput) {
     });
 }
 
-// CAMADA 2 - BUSCAR DADOS DO BANCO 
+// CAMADA 2 - SALVAR DADOS E REDIRECIONAR
 
 document.getElementById('cadastroForm').addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // Montando o objeto com todos os IDs exatos do seu HTML
+    // 1. Pegar os campos de senha para verificar igualdade e padrão
+    const senhaValue = document.getElementById('password').value;
+    const confirmacaoValue = document.getElementById('confirmPassword').value;
+    const regexSenha = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6}$/;
+
+    // 2. Verificação básica de segurança antes de salvar
+    if (senhaValue !== confirmacaoValue) {
+        alert("Erro: As senhas não coincidem.");
+        return;
+    }
+
+    if (!regexSenha.test(senhaValue)) {
+        alert("Erro: A senha deve ter 6 caracteres, incluindo letras e números.");
+        return;
+    }
+
+    // 3. Montando o objeto completo
     const novoUsuario = {
         nome: document.getElementById('nome').value,
         email: document.getElementById('email').value,
@@ -124,16 +140,16 @@ document.getElementById('cadastroForm').addEventListener('submit', (e) => {
         logradouro: document.getElementById('logradouro').value,
         numero: document.getElementById('numero').value,
         complemento: document.getElementById('complemento').value,
-        senha: senha 
+        senha: senhaValue // Valor capturado corretamente
     };
 
-    // Chamar a função do database.js
+    // 4. Chamar a função do database.js (que já está no escopo global)
     const resultado = salvarUsuario(novoUsuario);
 
     if (resultado.sucesso) {
         alert("Usuário cadastrado com sucesso!");
-        window.location.href = "login.html"; // Redireciona para o login
+        window.location.href = "login.html"; // Certifique-se que o nome do arquivo está correto
     } else {
-        alert(resultado.mensagem); // Ex: "E-mail já cadastrado!"
+        alert(resultado.mensagem); 
     }
 });
