@@ -138,3 +138,65 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+// Mostrar forma de pagamento
+const metodoPagamento = document.getElementById("metodoPagamento");
+const pagamentoPix = document.getElementById("pagamento-pix");
+const pagamentoCartao = document.getElementById("pagamento-cartao");
+
+metodoPagamento.addEventListener("change", function () {
+    if (this.value === "pix") {
+        pagamentoPix.style.display = "block";
+        pagamentoCartao.style.display = "none";
+    } else if (this.value === "cartao") {
+        pagamentoPix.style.display = "none";
+        pagamentoCartao.style.display = "block";
+    } else {
+        pagamentoPix.style.display = "none";
+        pagamentoCartao.style.display = "none";
+    }
+});
+
+
+//  MÁSCARAS DOS INPUTS DO CARTÃO 
+
+// Seleciona os inputs
+const numeroCartao = document.querySelector('input[placeholder="Número do cartão"]');
+const nomeCartao = document.querySelector('input[placeholder="Nome no cartão"]');
+const validadeCartao = document.querySelector('input[placeholder="Validade (MM/AA)"]');
+const cvvCartao = document.querySelector('input[placeholder="CVV"]');
+
+
+// Número do cartão → 0000 0000 0000 0000
+numeroCartao.addEventListener("input", function () {
+    let valor = this.value.replace(/\D/g, ""); // remove tudo que não é número
+    valor = valor.substring(0, 16); // máximo 16 números
+    valor = valor.replace(/(\d{4})(?=\d)/g, "$1 ");
+    this.value = valor;
+});
+
+
+// Nome no cartão → somente letras
+nomeCartao.addEventListener("input", function () {
+    this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, "");
+});
+
+
+// Validade → MM/AA
+validadeCartao.addEventListener("input", function () {
+    let valor = this.value.replace(/\D/g, "");
+    valor = valor.substring(0, 4);
+
+    if (valor.length > 2) {
+        valor = valor.replace(/(\d{2})(\d+)/, "$1/$2");
+    }
+
+    this.value = valor;
+});
+
+
+// CVV → apenas 3 números
+cvvCartao.addEventListener("input", function () {
+    let valor = this.value.replace(/\D/g, "");
+    this.value = valor.substring(0, 3);
+});

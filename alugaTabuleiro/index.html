@@ -99,151 +99,484 @@
 
 
 
-        <!--catalogo de destaque -->
+      <!--catalogo de destaque -->
 
-        <section id="catalogo" class="catalogo-section">
-            <div class="container">
-                <h2 class="titulo-secao mb-4 text-center">⭐ Mais vendidos </h2>
-                <p class="ver-catalogo mt-3 "><a href="catalogo.html">Ver todo o catálogo</a></p>
+<section id="catalogo" class="catalogo-section">
+    <div class="container">
+        <h2 class="titulo-secao mb-4 text-center">⭐ Mais vendidos </h2>
+        <p class="ver-catalogo mt-3">
+            <a href="catalogo.html">Ver todo o catálogo</a>
+        </p>
 
-                <!-- CARROSSEL DE JOGOS -->
-                <div class="carrossel-wrapper">
+        <!-- CARROSSEL DE JOGOS -->
+        <div class="carrossel-wrapper">
 
-                    <div class="carrossel">
+            <div class="carrossel">
 
-                        <!-- Exemplo de card -->
-                        <div class="card-jogo">
-                            <a href="catan.html" class="card-link">
-                                <img src="img/catan.jpg" alt="Catan">
-                            </a>
-                            <div class="card-info">
-                                <h5 class="nome-jogo">Catan</h5>
-                                <span class="status disponivel">🟢 Disponível</span>
-                                <p class="detalhes-jogo">
-                                    Jogadores: 3-4<br>
-                                    Duração: 60-120 min<br>
-                                    Categoria: Estratégia<br>
-                                    Período: 3 dias<br>
-                                    R$ 20,00
-                                </p>
-                                <button class="btn-comprar" onclick="adicionarCarrinho('Catan', 20)">
-                                    🛒 Alugar
-                                </button>
-                            </div>
-                        </div>
+                <!-- CATAN -->
+                <div class="card-jogo">
 
-                        <div class="card-jogo">
-                            <a href="ticket.html" class="card-link">
-                                <img src="img/ticket.jpg" alt="Ticket to Ride">
-                            </a>
-                            <div class="card-info">
-                                <h5 class="nome-jogo">Ticket to Ride</h5>
-                                <span class="status disponivel">🟢 Disponível</span>
-                                <p class="detalhes-jogo">
-                                    Jogadores: 2-5<br>
-                                    Duração: 30-60 min<br>
-                                    Categoria: Família<br>
-                                    Período: 3 dias<br>
-                                    R$ 15,00
-                                </p>
-                                <button class="btn-comprar" onclick="adicionarCarrinho('Ticket to Ride', 15)">
-                                    🛒 Alugar
-                                </button>
-                            </div>
-                        </div>
-                        <div class="card-jogo">
-                            <a href="azul.html" class="card-link">
-                                <img src="img/azul.jpg" alt="Azul">
-                            </a>
-                            <div class="card-info">
-                                <h5 class="nome-jogo">Azul</h5>
-                                <span class="status disponivel">🟢 Disponível</span>
-                                <p class="detalhes-jogo">
-                                    Jogadores: 2-4<br>
-                                    Duração: 30-45 min<br>
-                                    Categoria: Estratégia<br>
-                                    Período: 3 dias<br>
-                                    R$ 28,00
-                                </p>
-                                <button class="btn-comprar" onclick="adicionarCarrinho('Azul', 28)">
-                                    🛒 Alugar
-                                </button>
-                            </div>
-                        </div>
+                    <img 
+                        src="img/catan.jpg" 
+                        alt="Catan"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalCatan"
+                        style="cursor: pointer;"
+                    >
 
-                        <div class="card-jogo">
-                            <a href="pandemic.html" class="card-link">
-                                <img src="img/pandemic.jpg" alt="Pandemic">
-                            </a>
-                            <div class="card-info">
-                                <h5 class="nome-jogo">Pandemic</h5>
-                                <span class="status disponivel">🟢 Disponível</span>
-                                <p class="detalhes-jogo">
-                                    Jogadores: 2-4<br>
-                                    Duração: 45-60 min<br>
-                                    Categoria: Cooperativo<br>
-                                    Período: 3 dias<br>
-                                    R$ 30,00
-                                </p>
-                                <button class="btn-comprar" onclick="adicionarCarrinho('Pandemic', 30)">
-                                    🛒 Alugar
-                                </button>
-                            </div>
-                        </div>
+                    <div class="card-info">
+                        <h5 class="nome-jogo">Catan</h5>
 
-                        <div class="card-jogo">
-                            <a href="war.html" class="card-link">
-                                <img src="img/war.jpg" alt="War">
-                            </a>
-                            <div class="card-info">
-                                <br> <br>
+                        <p class="detalhes-jogo">
+                            Jogadores: 3-4<br>
+                            Duração: 60-120 min<br>
+                            Categoria: Estratégia<br>
+                            Período: 3 dias<br>
+                            R$ 20,00
+                        </p>
 
-                                <h5 class="nome-jogo" id="war">War</h5>
-                                <span class="status disponivel">🟢 Disponível</span>
-                                <p class="detalhes-jogo">
-                                    Jogadores: 2-6<br>
-                                    Duração: 90-120 min<br>
-                                    Categoria: Estratégia<br>
-                                    Período: 3 dias<br>
-                                    R$ 25,00
-                                </p>
-                                <button class="btn-comprar" onclick="adicionarCarrinho('War', 25)">
-                                    🛒 Alugar
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="card-jogo">
-                            <a href="banco-imobiliario.html" class="card-link">
-                                <img src="img/banco.jpg" alt="Banco Imobiliário">
-                            </a>
-                            <div class="card-info">
-                                <h5 class="nome-jogo">Banco Imobiliário</h5>
-                                <span class="status disponivel">🟢 Disponível</span>
-                                <p class="detalhes-jogo">
-                                    Jogadores: 2-6<br>
-                                    Duração: 90 min<br>
-                                    Categoria: Família<br>
-                                    Período: 3 dias<br>
-                                    R$ 40,00
-                                </p>
-                                <button class="btn-comprar" onclick="adicionarCarrinho('banco-imobiliario', 40)">
-                                    🛒 Alugar
-                                </button>
-                            </div>
-                        </div>
-
-
-
-
+                        <button class="btn-comprar" onclick="adicionarCarrinho('Catan', 20)">
+                            🛒 Alugar
+                        </button>
                     </div>
                 </div>
+
+                <!-- TICKET -->
+                <div class="card-jogo">
+
+                    <img 
+                        src="img/ticket.jpg" 
+                        alt="Ticket to Ride"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalTicket"
+                        style="cursor: pointer;"
+                    >
+
+                    <div class="card-info">
+                        <h5 class="nome-jogo">Ticket to Ride</h5>
+
+                        <p class="detalhes-jogo">
+                            Jogadores: 2-5<br>
+                            Duração: 30-60 min<br>
+                            Categoria: Família<br>
+                            Período: 3 dias<br>
+                            R$ 15,00
+                        </p>
+
+                        <button class="btn-comprar" onclick="adicionarCarrinho('Ticket to Ride', 15)">
+                            🛒 Alugar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AZUL -->
+                <div class="card-jogo">
+
+                    <img 
+                        src="img/azul.jpg" 
+                        alt="Azul"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalAzul"
+                        style="cursor: pointer;"
+                    >
+
+                    <div class="card-info">
+                        <h5 class="nome-jogo">Azul</h5>
+
+                        <p class="detalhes-jogo">
+                            Jogadores: 2-4<br>
+                            Duração: 30-45 min<br>
+                            Categoria: Estratégia<br>
+                            Período: 3 dias<br>
+                            R$ 28,00
+                        </p>
+
+                        <button class="btn-comprar" onclick="adicionarCarrinho('Azul', 28)">
+                            🛒 Alugar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PANDEMIC -->
+                <div class="card-jogo">
+
+                    <img 
+                        src="img/pandemic.jpg" 
+                        alt="Pandemic"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalPandemic"
+                        style="cursor: pointer;"
+                    >
+
+                    <div class="card-info">
+                        <h5 class="nome-jogo">Pandemic</h5>
+
+                        <p class="detalhes-jogo">
+                            Jogadores: 2-4<br>
+                            Duração: 45-60 min<br>
+                            Categoria: Cooperativo<br>
+                            Período: 3 dias<br>
+                            R$ 30,00
+                        </p>
+
+                        <button class="btn-comprar" onclick="adicionarCarrinho('Pandemic', 30)">
+                            🛒 Alugar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- WAR -->
+                <div class="card-jogo">
+
+                    <img 
+                        src="img/war.jpg" 
+                        alt="War"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalWar"
+                        style="cursor: pointer;"
+                    >
+
+                    <div class="card-info">
+                        <br><br>
+
+                        <h5 class="nome-jogo" id="war">War</h5>
+
+                        <p class="detalhes-jogo">
+                            Jogadores: 2-6<br>
+                            Duração: 90-120 min<br>
+                            Categoria: Estratégia<br>
+                            Período: 3 dias<br>
+                            R$ 25,00
+                        </p>
+
+                        <button class="btn-comprar" onclick="adicionarCarrinho('War', 25)">
+                            🛒 Alugar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- BANCO IMOBILIÁRIO -->
+                <div class="card-jogo">
+
+                    <img 
+                        src="img/banco.jpg" 
+                        alt="Banco Imobiliário"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalBanco"
+                        style="cursor: pointer;"
+                    >
+
+                    <div class="card-info">
+                        <h5 class="nome-jogo">Banco Imobiliário</h5>
+
+                        <p class="detalhes-jogo">
+                            Jogadores: 2-6<br>
+                            Duração: 90 min<br>
+                            Categoria: Família<br>
+                            Período: 3 dias<br>
+                            R$ 40,00
+                        </p>
+
+                        <button class="btn-comprar" onclick="adicionarCarrinho('Banco Imobiliário', 40)">
+                            🛒 Alugar
+                        </button>
+                    </div>
+                </div>
+
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
+
 
 
     </main>
 
+    <!-- ================= MODAIS DOS JOGOS ================= -->
+
+
+<!-- MODAL CATAN -->
+<div class="modal fade" id="modalCatan" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">🌍 Catan</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+
+                    <div class="col-md-5 text-center">
+                        <img src="img/catan.jpg" class="img-fluid rounded shadow-sm">
+                    </div>
+
+                    <div class="col-md-7">
+                        <p><strong>Descrição:</strong><br>
+                            Expanda territórios, negocie recursos e construa vilas para dominar a ilha de Catan.
+                        </p>
+
+                        <hr>
+
+                        <p><strong>👥 Jogadores:</strong> 3 a 4</p>
+                        <p><strong>⏱️ Duração:</strong> 60 a 120 min</p>
+                        <p><strong>🎯 Categoria:</strong> Estratégia</p>
+                        <p><strong>🎮 Dificuldade:</strong> Média</p>
+
+                        <hr>
+
+                        <h4 class="text-success">R$ 20,00</h4>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-comprar" onclick="adicionarCarrinho('Catan', 20)">
+                    🛒 Alugar
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- MODAL TICKET TO RIDE -->
+<div class="modal fade" id="modalTicket" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">🚂 Ticket to Ride</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+
+                    <div class="col-md-5 text-center">
+                        <img src="img/ticket.jpg" class="img-fluid rounded shadow-sm">
+                    </div>
+
+                    <div class="col-md-7">
+                        <p><strong>Descrição:</strong><br>
+                            Construa rotas ferroviárias e conecte cidades para conquistar o maior número de pontos.
+                        </p>
+
+                        <hr>
+
+                        <p><strong>👥 Jogadores:</strong> 2 a 5</p>
+                        <p><strong>⏱️ Duração:</strong> 30 a 60 min</p>
+                        <p><strong>🎯 Categoria:</strong> Família</p>
+
+                        <hr>
+
+                        <h4 class="text-success">R$ 15,00</h4>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-comprar" onclick="adicionarCarrinho('Ticket to Ride', 15)">
+                    🛒 Alugar
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- MODAL AZUL -->
+<div class="modal fade" id="modalAzul" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">🔵 Azul</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+
+                    <div class="col-md-5 text-center">
+                        <img src="img/azul.jpg" class="img-fluid rounded shadow-sm">
+                    </div>
+
+                    <div class="col-md-7">
+                        <p><strong>Descrição:</strong><br>
+                            Monte belíssimos mosaicos portugueses com estratégia e planejamento.
+                        </p>
+
+                        <hr>
+
+                        <p><strong>👥 Jogadores:</strong> 2 a 4</p>
+                        <p><strong>⏱️ Duração:</strong> 30 a 45 min</p>
+                        <p><strong>🎯 Categoria:</strong> Estratégia</p>
+
+                        <hr>
+
+                        <h4 class="text-success">R$ 28,00</h4>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-comprar" onclick="adicionarCarrinho('Azul', 28)">
+                    🛒 Alugar
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- MODAL PANDEMIC -->
+<div class="modal fade" id="modalPandemic" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">🦠 Pandemic</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+
+                    <div class="col-md-5 text-center">
+                        <img src="img/pandemic.jpg" class="img-fluid rounded shadow-sm">
+                    </div>
+
+                    <div class="col-md-7">
+                        <p><strong>Descrição:</strong><br>
+                            Trabalhe em equipe para impedir a propagação de doenças pelo mundo.
+                        </p>
+
+                        <hr>
+
+                        <p><strong>👥 Jogadores:</strong> 2 a 4</p>
+                        <p><strong>⏱️ Duração:</strong> 45 a 60 min</p>
+                        <p><strong>🎯 Categoria:</strong> Cooperativo</p>
+
+                        <hr>
+
+                        <h4 class="text-success">R$ 30,00</h4>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-comprar" onclick="adicionarCarrinho('Pandemic', 30)">
+                    🛒 Alugar
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- MODAL WAR -->
+<div class="modal fade" id="modalWar" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">⚔️ War</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+
+                    <div class="col-md-5 text-center">
+                        <img src="img/war.jpg" class="img-fluid rounded shadow-sm">
+                    </div>
+
+                    <div class="col-md-7">
+                        <p><strong>Descrição:</strong><br>
+                            Domine territórios e monte estratégias militares para conquistar o mundo.
+                        </p>
+
+                        <hr>
+
+                        <p><strong>👥 Jogadores:</strong> 2 a 6</p>
+                        <p><strong>⏱️ Duração:</strong> 90 a 120 min</p>
+                        <p><strong>🎯 Categoria:</strong> Estratégia</p>
+
+                        <hr>
+
+                        <h4 class="text-success">R$ 25,00</h4>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-comprar" onclick="adicionarCarrinho('War', 25)">
+                    🛒 Alugar
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- MODAL BANCO IMOBILIÁRIO -->
+<div class="modal fade" id="modalBanco" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">🏦 Banco Imobiliário</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+
+                    <div class="col-md-5 text-center">
+                        <img src="img/banco.jpg" class="img-fluid rounded shadow-sm">
+                    </div>
+
+                    <div class="col-md-7">
+                        <p><strong>Descrição:</strong><br>
+                            Compre, venda e negocie propriedades para se tornar o maior magnata financeiro.
+                        </p>
+
+                        <hr>
+
+                        <p><strong>👥 Jogadores:</strong> 2 a 6</p>
+                        <p><strong>⏱️ Duração:</strong> 90 min</p>
+                        <p><strong>🎯 Categoria:</strong> Família</p>
+
+                        <hr>
+
+                        <h4 class="text-success">R$ 40,00</h4>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-comprar" onclick="adicionarCarrinho('Banco Imobiliário', 40)">
+                    🛒 Alugar
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 
 
