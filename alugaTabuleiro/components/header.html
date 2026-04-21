@@ -45,9 +45,18 @@
                         <span id="contador-carrinho">0</span>
                     </a>
 
-                    <a href="login.html" class="btn-login">Login</a>
+                    <!-- aparece quando NÃO estiver logado -->
+                    <a href="login.html" class="btn-login" id="btnLogin">Login</a>
 
-                   
+                    <!-- aparece quando estiver logado -->
+                    <a href="painel_user.html" class="btn-login" id="btnPainel"
+                        style="display: none; font-size: 15px; padding: 6px 12px;">
+                        Meu Painel
+                    </a>
+
+                    <!-- nome do usuário -->
+                    <span id="nomeUsuario" style="display: none; font-weight: 600;"></span>
+
 
 
 
@@ -57,28 +66,28 @@
         </div>
     </nav>
 
-     <!--Modal  CARRINHO -->
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="carrinhoLateral">
+    <!--Modal  CARRINHO -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="carrinhoLateral">
 
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title">Seu Carrinho</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-                        </div>
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Seu Carrinho</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
 
-                        <div class="offcanvas-body d-flex flex-column">
+        <div class="offcanvas-body d-flex flex-column">
 
-                            <ul id="lista-carrinho" class="list-group mb-3"></ul>
+            <ul id="lista-carrinho" class="list-group mb-3"></ul>
 
-                            <p id="carrinho-vazio" class="text-center mt-3">
-                                Seu carrinho está vazio 🛒
-                            </p>
+            <p id="carrinho-vazio" class="text-center mt-3">
+                Seu carrinho está vazio 🛒
+            </p>
 
-                            <h5 class="mt-auto">Total: R$ <span id="total">0.00</span></h5>
+            <h5 class="mt-auto">Total: R$ <span id="total">0.00</span></h5>
 
-                            <button class="btn-finalizar w-100 mt-2" onclick="irParaFinalizarCompra() ">
-                                Finalizar Compra
-                            </button>
-                        </div>
-                    </div>
+            <button class="btn-finalizar w-100 mt-2" onclick="irParaFinalizarCompra() ">
+                Finalizar Compra
+            </button>
+        </div>
+    </div>
 
 </header>

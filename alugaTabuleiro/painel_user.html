@@ -29,29 +29,38 @@
     </div>
 
     <header class="painel-header">
-        <img src="img/logotabuleiro.png" alt="Logo Aluga Tabuleiro" class="login-logo">
+        <a href="index.html">
+            <img src="img/logotabuleiro.png" alt="Logo Aluga Tabuleiro" class="login-logo">
+        </a>
+
         <nav role="navigation" aria-label="Navegação principal do painel do usuário">
             <ul>
+                <li>
+                    <a href="index.html" id="continuarComprando" class="btn-continuar">
+                        Continuar Comprando
+                    </a>
+                </li>
+
                 <li><a href="#pedidos">Meus Pedidos</a></li>
                 <li><a href="#dados">Meus Dados</a></li>
-                <li><a href="login.html">Sair</a></li>
+                <li><a href="#" onclick="logout()">Sair</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
 
-    <header class="painel-boas-vindas">
-        <h1>Olá, [Nome do Usuário]</h1>
-        <p>Bem-vindo ao seu painel. Aqui você gerencia seus aluguéis e dados pessoais.</p>
-    </header>
+        <header class="painel-boas-vindas">
+            <h1>Olá, [Nome do Usuário]</h1>
+            <p>Bem-vindo ao seu painel. Aqui você gerencia seus aluguéis e dados pessoais.</p>
+        </header>
 
-    <hr>
-        
+        <hr>
+
         <section id="pedidos" aria-labelledby="pedidos-title">
             <h2 id="pedidos-title">Meus Pedidos</h2>
             <p>Histórico dos seus aluguéis (do mais recente para o mais antigo):</p>
-            
+
             <table>
                 <caption>Histórico de pedidos de aluguel</caption>
                 <thead>
@@ -80,17 +89,26 @@
                     </tr>
                 </tbody>
             </table>
+            <!-- BOTÃO CONCLUIR COMPRA -->
+            <div style="text-align: left; margin-top: 20px;">
+                <button
+                    style="background:#f7d12a; border: none; color: #000; font-weight: 600; padding: 10px 20px; border-radius: 8px;"
+                    onclick="window.location.href='finalizarCompra.html'">
+                    Concluir Compra
+                </button>
+            </div>
         </section>
         <br>
 
         <section id="dados" aria-labelledby="dados-title">
             <h2 id="dados-title">Meus Dados</h2>
             <form id="updateForm" role="form" aria-labelledby="dados-title">
-                
+
                 <div class="input-group">
                     <label for="nome">Nome Completo</label>
                     <div class="field-wrapper" id="nomeWrapper">
-                        <input type="text" id="nome" value="[Nome do Usuário]" required aria-required="true" aria-describedby="nomeError">
+                        <input type="text" id="nome" value="[Nome do Usuário]" required aria-required="true"
+                            aria-describedby="nomeError">
                     </div>
                     <span id="nomeError" class="error-msg" aria-live="polite"></span>
                 </div>
@@ -106,7 +124,8 @@
                     <div class="input-group flex-1">
                         <label for="telefone">Telefone</label>
                         <div class="field-wrapper" id="telefoneWrapper">
-                            <input type="text" id="telefone" placeholder="(+55) XX-XXXXXXXX" aria-describedby="telefoneError">
+                            <input type="text" id="telefone" placeholder="(+55) XX-XXXXXXXX"
+                                aria-describedby="telefoneError">
                         </div>
                     </div>
                 </div>
@@ -115,7 +134,8 @@
                     <div class="input-group flex-1">
                         <label for="cep">CEP</label>
                         <div class="field-wrapper" id="cepWrapper">
-                            <input type="text" id="cep" maxlength="9" placeholder="00000-000" aria-describedby="cepError">
+                            <input type="text" id="cep" maxlength="9" placeholder="00000-000"
+                                aria-describedby="cepError">
                         </div>
                     </div>
                     <div class="input-group flex-3">
@@ -185,6 +205,7 @@
     </script>
     <script src="database/database.js"></script>
     <script src="js/painel_user.js"></script>
+    <script src="js/carrinho.js"></script>
 
 </body>
 

@@ -1,7 +1,7 @@
 // 🛒 PUXAR CARRINHO
 let pedidos = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-/*// 🔐 VERIFICAR LOGIN
+// 🔐 VERIFICAR LOGIN
 function verificarLogin() {
     let logado = localStorage.getItem("usuarioLogado");
 
@@ -9,7 +9,7 @@ function verificarLogin() {
         alert("Você precisa fazer login primeiro!");
         window.location.href = "login.html";
     }
-}*/
+}
 
 // 🧾 RENDERIZAR PEDIDOS
 function renderPedidos() {
@@ -156,6 +156,11 @@ metodoPagamento.addEventListener("change", function () {
         pagamentoCartao.style.display = "none";
     }
 });
+
+
+
+
+
 
 
 //  MÁSCARAS DOS INPUTS DO CARTÃO 

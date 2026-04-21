@@ -1,81 +1,101 @@
 // js/Painel_user.js
-document.addEventListener('DOMContentLoaded', () => {
+
+document.addEventListener("DOMContentLoaded", () => {
     const user = obterUsuarioLogado();
 
+    // se não estiver logado, volta para login
     if (!user) {
         window.location.href = "login.html";
         return;
     }
 
-    // 1. Preencher Título
-    document.querySelector('header h1').textContent = `Olá, ${user.nome}`;
+    // preencher título de boas-vindas
+    const titulo = document.querySelector(".painel-boas-vindas h1");
+    if (titulo) {
+        titulo.textContent = `Olá, ${user.nome}`;
+    }
 
-    // 2. Lista de IDs para preencher automaticamente
-    const campos = ['nome', 'email', 'telefone', 'cep', 'logradouro', 'numero', 'complemento', 'password'];
+    // preencher campos do formulário
+    const campos = [
+        "nome",
+        "email",
+        "telefone",
+        "cep",
+        "logradouro",
+        "numero",
+        "complemento",
+        "password"
+    ];
 
     campos.forEach(id => {
         const input = document.getElementById(id);
+
         if (input) {
-            // No caso da senha, o campo no objeto é 'senha', mas o ID no HTML é 'password'
-            input.value = (id === 'password') ? user.senha : user[id];
+            // password pega de "senha"
+            input.value = (id === "password")
+                ? (user.senha || "")
+                : (user[id] || "");
         }
     });
 
+    // máscara telefone
+    configurarMascaraTelefone();
+
+    // carregar pedidos vindos do carrinho
     renderizarPedidos();
 });
 
+
+// PEDIDOS = ITENS DO CARRINHO
 function renderizarPedidos() {
-    const tabela = document.querySelector('#pedidos tbody');
+    const tabela = document.querySelector("#pedidos tbody");
+
     if (!tabela) return;
 
-    const fakes = [
-        { id: "#5502", data: "20/03/2026", dev: "25/03/2026", status: "Em andamento", total: "R$ 120,00" },
-        { id: "#4890", data: "10/01/2026", dev: "15/01/2026", status: "Finalizado", total: "R$ 85,00" }
-    ];
+    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-    tabela.innerHTML = fakes.map(p => `
-        <tr>
-            <td>${p.id}</td>
-            <td>${p.data}</td>
-            <td>${p.dev}</td>
-            <td>${p.status}</td>
-            <td>${p.total}</td>
-        </tr>
-    `).join('');
-}
+    tabela.innerHTML = "";
 
-// js/Painel_user.js
-
-document.addEventListener('DOMContentLoaded', () => {
-    const user = obterUsuarioLogado();
-    if (!user) {
-        window.location.href = "login.html";
+    if (carrinho.length === 0) {
+        tabela.innerHTML = `
+            <tr>
+                <td colspan="5">Nenhum pedido encontrado 🛒</td>
+            </tr>
+        `;
         return;
     }
 
-    // 1. Preencher os campos
-    renderizarDadosUsuario(user);
-    
-    // 2. Ativar a máscara e formatar o que já veio do banco
-    configurarMascaraTelefone();
-    
-    renderizarPedidos();
-});
+    const hoje = new Date().toLocaleDateString("pt-BR");
 
+    carrinho.forEach((item, index) => {
+        tabela.innerHTML += `
+            <tr>
+                <td>#${1000 + index}</td>
+                <td>${hoje}</td>
+                <td>--/--/----</td>
+                <td>Em andamento</td>
+                <td>R$ ${item.preco.toFixed(2)}</td>
+            </tr>
+        `;
+    });
+}
+
+
+// MÁSCARA TELEFONE
 function configurarMascaraTelefone() {
-    const inputTelefone = document.getElementById('telefone');
+    const inputTelefone = document.getElementById("telefone");
 
     if (inputTelefone) {
-        inputTelefone.addEventListener('input', (e) => {
+        inputTelefone.addEventListener("input", (e) => {
             let v = e.target.value;
-            
-            // Remove tudo o que não for dígito
+
+            // remove tudo que não for número
             v = v.replace(/\D/g, "");
-            
-            // Limita a 11 dígitos (DDD + 9 números)
+
+            // limita em 11 dígitos
             v = v.slice(0, 11);
 
-            // Aplica a formatação (XX) XXXXX-XXXX 
+            // aplica máscara
             if (v.length > 10) {
                 v = v.replace(/^(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
             } else if (v.length > 5) {
@@ -83,8 +103,18 @@ function configurarMascaraTelefone() {
             } else if (v.length > 2) {
                 v = v.replace(/^(\d{2})/, "($1) ");
             }
-            
+
             e.target.value = v;
         });
     }
+}
+
+
+// LOGOUT
+function logout() {
+    localStorage.removeItem("usuario_logado");
+
+    alert("Logout realizado com sucesso!");
+
+    window.location.href = "index.html";
 }
