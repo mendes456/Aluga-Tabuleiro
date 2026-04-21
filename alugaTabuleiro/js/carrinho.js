@@ -2,30 +2,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // 🛒 CARREGAR CARRINHO DO LOCALSTORAGE
 let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
@@ -101,6 +77,20 @@ function removerItem(index) {
 
 // 🚀 IR PARA FINALIZAR COMPRA
 function irParaFinalizarCompra() {
+    let logado = localStorage.getItem("usuario_logado");
+
+    // verifica se está logado antes de ir para finalizar compra
+    if (!logado) {
+        alert("Você precisa estar logado para continuar!");
+        window.location.href = "login.html";
+        return;
+    }
+
+    // se estiver logado, vai para finalizar compra
+    window.location.href = "finalizarCompra.html";
+}
+
+/*function irParaFinalizarCompra() {
 
     if (carrinho.length === 0) {
         alert("Seu carrinho está vazio! 🛒");
@@ -108,7 +98,9 @@ function irParaFinalizarCompra() {
     }
 
     window.location.href = "finalizarCompra.html";
-}
+}*/
+
+
 
 // 🚀 INICIALIZAÇÃO
 
@@ -131,3 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 100);
 
 });
+
+
+
