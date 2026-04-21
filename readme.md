@@ -4,8 +4,8 @@ Projeto AlugaTabuleiro
 
 
 Referencias 
-https://www.arcaludis.com.br/
-https://www.placegames.com.br/ 
+https://www.arcaludis.com.br/, 
+https://www.placegames.com.br/, 
 https://allugator.com/ 
 
 
