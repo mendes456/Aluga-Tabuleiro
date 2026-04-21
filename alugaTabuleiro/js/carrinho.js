@@ -77,6 +77,14 @@ function removerItem(index) {
 
 // 🚀 IR PARA FINALIZAR COMPRA
 function irParaFinalizarCompra() {
+   
+
+    // verifica se o carrinho está vazio
+    if (carrinho.length === 0) {
+        alert("Seu carrinho está vazio! 🛒");
+        return;
+    }
+
     let logado = localStorage.getItem("usuario_logado");
 
     // verifica se está logado antes de ir para finalizar compra
