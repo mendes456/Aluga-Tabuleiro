@@ -22,9 +22,9 @@
 }
 
 body {
-  background-color: var(--cor-fundo);
+  background-color:  #f5f5f5;
   color: var(--cor-texto);
-  font-family: var(--font-corpo);
+  
   font-weight: 400;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
@@ -72,8 +72,8 @@ body {
 
 /* ── Título ───────────────────────────────────── */
 .sobre h1 {
-  font-family: var(--font-display);
-  font-size: clamp(2.6rem, 6vw, 4.2rem);
+ 
+  font-size: 36px;
   font-weight: 700;
   color: var(--cor-escura);
   line-height: 1.1;
