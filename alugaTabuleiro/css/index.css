@@ -119,6 +119,9 @@ body {
     border-radius: 12px;
     border: 2px solid var(--marrom-claro);
     transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;  /*imagem ocupa toda a largura da coluna*/
+    height: 400px;  /*deixa todas as imagens com o mesmo tamanho*/
+    object-fit: cover;  /*preenche o espaço*/
 }
 
 .como-funciona .passos .passo h3 {

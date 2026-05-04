@@ -12,6 +12,7 @@
 /* Fundo geral da página desta política */
 body {
     background-color: #f5f5f5; /* cinza claro */
+    
 }
 
 /* Área principal da política */
@@ -19,22 +20,6 @@ main {
     min-height: 60vh;
 }
 
-/* Seção de política: caixa centralizada, com leve destaque */
-.politica-container,
-.container.politica-container {
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 40px 30px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-/* Ajuste para usar a classe no HTML atual (coluna principal) */
-.col-lg-10 {
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 40px 30px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
 
 /* Título principal */
 h1 {
@@ -74,11 +59,7 @@ article ul li {
     color: #4f4a3c;
 }
 
-/* Pequeno destaque visual nos artigos (espaçamento entre blocos) */
-article {
-    border-left: 4px solid rgba(216, 109, 38, 0.15); /* laranja bem suave */
-    padding-left: 12px;
-}
+
 
 /* Footer interno do texto da política */
 article + footer,
