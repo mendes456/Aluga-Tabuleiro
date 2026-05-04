@@ -1,6 +1,10 @@
+<<<<<<< Updated upstream
 // js/Painel_user.js
 
 document.addEventListener("DOMContentLoaded", () => {
+=======
+document.addEventListener('DOMContentLoaded', () => {
+>>>>>>> Stashed changes
     const user = obterUsuarioLogado();
 
     // se não estiver logado, volta para login
@@ -56,12 +60,19 @@ function renderizarPedidos() {
 
     tabela.innerHTML = "";
 
+<<<<<<< Updated upstream
     if (carrinho.length === 0) {
         tabela.innerHTML = `
             <tr>
                 <td colspan="5">Nenhum pedido encontrado 🛒</td>
             </tr>
         `;
+=======
+document.addEventListener('DOMContentLoaded', () => {
+    const user = obterUsuarioLogado();
+    if (!user) {
+        window.location.href = "login.html";
+>>>>>>> Stashed changes
         return;
     }
 
