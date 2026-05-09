@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', sans-serif;
-    font-size: 12px; /* Fonte 12 conforme solicitado */
+   
 }
 
 body {
@@ -341,3 +341,4 @@ footer {
 .login-logo {
     cursor: pointer;
 }
+
