@@ -1,25 +1,30 @@
-<<<<<<< Updated upstream
-// js/Painel_user.js
+// js/painel_user.js
 
 document.addEventListener("DOMContentLoaded", () => {
-=======
-document.addEventListener('DOMContentLoaded', () => {
->>>>>>> Stashed changes
+
+    // pega usuário logado
     const user = obterUsuarioLogado();
 
-    // se não estiver logado, volta para login
+    // se não existir usuário
     if (!user) {
         window.location.href = "login.html";
         return;
     }
 
-    // preencher título de boas-vindas
+    // =========================
+    // BOAS-VINDAS
+    // =========================
+
     const titulo = document.querySelector(".painel-boas-vindas h1");
+
     if (titulo) {
         titulo.textContent = `Olá, ${user.nome}`;
     }
 
-    // preencher campos do formulário
+    // =========================
+    // PREENCHER FORMULÁRIO
+    // =========================
+
     const campos = [
         "nome",
         "email",
@@ -31,98 +36,135 @@ document.addEventListener('DOMContentLoaded', () => {
         "password"
     ];
 
-    campos.forEach(id => {
+    campos.forEach((id) => {
+
         const input = document.getElementById(id);
 
         if (input) {
-            // password pega de "senha"
-            input.value = (id === "password")
-                ? (user.senha || "")
-                : (user[id] || "");
+
+            // password vem de "senha"
+            if (id === "password") {
+                input.value = user.senha || "";
+            } else {
+                input.value = user[id] || "";
+            }
         }
     });
 
-    // máscara telefone
+    // ativa máscara
     configurarMascaraTelefone();
 
-    // carregar pedidos vindos do carrinho
+    // renderiza pedidos
     renderizarPedidos();
 });
 
 
+// ======================================
 // PEDIDOS = ITENS DO CARRINHO
+// ======================================
+
 function renderizarPedidos() {
+
     const tabela = document.querySelector("#pedidos tbody");
 
     if (!tabela) return;
 
-    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+    const carrinho =
+        JSON.parse(localStorage.getItem("carrinho")) || [];
 
     tabela.innerHTML = "";
 
-<<<<<<< Updated upstream
+    // carrinho vazio
     if (carrinho.length === 0) {
+
         tabela.innerHTML = `
             <tr>
-                <td colspan="5">Nenhum pedido encontrado 🛒</td>
+                <td colspan="5">
+                    Nenhum pedido encontrado 🛒
+                </td>
             </tr>
         `;
-=======
-document.addEventListener('DOMContentLoaded', () => {
-    const user = obterUsuarioLogado();
-    if (!user) {
-        window.location.href = "login.html";
->>>>>>> Stashed changes
+
         return;
     }
 
-    const hoje = new Date().toLocaleDateString("pt-BR");
+    const hoje =
+        new Date().toLocaleDateString("pt-BR");
 
     carrinho.forEach((item, index) => {
+
         tabela.innerHTML += `
             <tr>
                 <td>#${1000 + index}</td>
                 <td>${hoje}</td>
                 <td>--/--/----</td>
                 <td>Em andamento</td>
-                <td>R$ ${item.preco.toFixed(2)}</td>
+                <td>R$ ${Number(item.preco).toFixed(2)}</td>
             </tr>
         `;
     });
 }
 
 
+// ======================================
 // MÁSCARA TELEFONE
+// ======================================
+
 function configurarMascaraTelefone() {
-    const inputTelefone = document.getElementById("telefone");
 
-    if (inputTelefone) {
-        inputTelefone.addEventListener("input", (e) => {
-            let v = e.target.value;
+    const inputTelefone =
+        document.getElementById("telefone");
 
-            // remove tudo que não for número
-            v = v.replace(/\D/g, "");
+    if (!inputTelefone) return;
 
-            // limita em 11 dígitos
-            v = v.slice(0, 11);
+    inputTelefone.addEventListener("input", (e) => {
 
-            // aplica máscara
-            if (v.length > 10) {
-                v = v.replace(/^(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
-            } else if (v.length > 5) {
-                v = v.replace(/^(\d{2})(\d{5})/, "($1) $2");
-            } else if (v.length > 2) {
-                v = v.replace(/^(\d{2})/, "($1) ");
-            }
+        let v = e.target.value;
 
-            e.target.value = v;
-        });
-    }
+        // remove caracteres
+        v = v.replace(/\D/g, "");
+
+        // máximo 11 números
+        v = v.slice(0, 11);
+
+        // celular
+        if (v.length > 10) {
+
+            v = v.replace(
+                /^(\d{2})(\d{5})(\d{4})$/,
+                "($1) $2-$3"
+            );
+
+        }
+        // telefone normal
+        else if (v.length > 6) {
+
+            v = v.replace(
+                /^(\d{2})(\d{4})(\d+)/,
+                "($1) $2-$3"
+            );
+
+        }
+        // ddd
+        else if (v.length > 2) {
+
+            v = v.replace(
+                /^(\d{2})(\d+)/,
+                "($1) $2"
+            );
+        }
+
+        e.target.value = v;
+    });
 }
 
 
+// ======================================
 // LOGOUT
+// ======================================
+
 function logout() {
+
     localStorage.removeItem("usuario_logado");
 
     alert("Logout realizado com sucesso!");
