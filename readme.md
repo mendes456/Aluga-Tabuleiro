@@ -12,7 +12,7 @@ https://allugator.com/
 Documentação do projeto 
 https://docs.google.com/document/d/1CrvaNHTAbjfzul0yc_FONekuDbc4BHcvhU4A_oQAV3w/edit?tab=t.0#heading=h.x8im6za62bmo
 
-Figma
+Figma - Referência
 
 https://www.figma.com/make/SkeFBKZoUCzv9KEOuKs1Sm/Apply-Color-Palette?p=f&t=cmOiNzcAcOMAC6VU-0
 
@@ -22,7 +22,9 @@ GitHub
 https://github.com/mendes456/Aluga-Tabuleiro
 
 
-Git IO ou Vercel
+Git IO 
+
+https://mendes456.github.io/Aluga-Tabuleiro/
 
 
 
