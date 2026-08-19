@@ -14,6 +14,7 @@ function adicionarCarrinho(nome, preco) {
 
     atualizarCarrinho(); 
     atualizarContador();
+    mostrarNotificacao(nome);
 
    
 }
@@ -96,6 +97,31 @@ function irParaFinalizarCompra() {
 
     // se estiver logado, vai para finalizar compra
     window.location.href = "finalizarCompra.html";
+}
+
+function mostrarNotificacao(nomeJogo) {
+    const notificacao = document.createElement("div");
+
+    notificacao.className = "notificacao-carrinho";
+    notificacao.innerHTML = `
+        🛒 <strong>${nomeJogo}</strong> foi adicionado ao carrinho!
+    `;
+
+    document.body.appendChild(notificacao);
+
+    // Mostra a notificação
+    setTimeout(() => {
+        notificacao.classList.add("mostrar");
+    }, 100);
+
+    // Remove depois de 3 segundos
+    setTimeout(() => {
+        notificacao.classList.remove("mostrar");
+
+        setTimeout(() => {
+            notificacao.remove();
+        }, 400);
+    }, 3000);
 }
 
 /*function irParaFinalizarCompra() {
