@@ -89,7 +89,28 @@ body{
    }
 
 
+/* NOTIFICAÇÃO DO CARRINHO */
+.notificacao-carrinho {
+    position: fixed;
+    top: 130px;
+    right: 20px;
+    background-color: #198754;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    z-index: 9999;
 
+    opacity: 0;
+    transform: translateX(120%);
+    transition: all 0.4s ease;
+}
+
+.notificacao-carrinho.mostrar {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 
 
